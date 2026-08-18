@@ -1,1 +1,468 @@
-<h1>Grupo P3</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupo P3 | Industria Nocturna</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 25%, rgba(255,255,255,.06), transparent 30%),
+        #050505;
+}
+
+/* CABECERA */
+
+header {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 30px 24px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.grupo-logo {
+    width: min(720px, 90%);
+    height: auto;
+    display: block;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 45px 20px 35px;
+}
+
+.hero-small {
+    font-size: 15px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.hero-script {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(35px, 6vw, 62px);
+    margin-bottom: 30px;
+    color: white;
+}
+
+.pulse {
+    width: 150px;
+    height: 1px;
+    background: white;
+    opacity: .5;
+    margin: 0 auto 28px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin: auto;
+    font-size: clamp(38px, 7vw, 78px);
+    line-height: .98;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+.destination {
+    margin-top: 25px;
+    font-size: 14px;
+    letter-spacing: 8px;
+    color: #ccc;
+}
+
+/* NEGOCIOS */
+
+.venues {
+    width: min(1100px, 94%);
+    margin: 20px auto 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.card {
+    position: relative;
+    min-height: 520px;
+    border: 1px solid #333;
+    border-radius: 25px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top, rgba(255,255,255,.08), transparent 45%),
+        linear-gradient(180deg, #111, #050505);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 35px 28px;
+    transition: .35s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 25%, rgba(0,0,0,.15) 50%, #050505 100%);
+    pointer-events: none;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+}
+
+.card-logo {
+    width: 85%;
+    max-height: 270px;
+    object-fit: contain;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+.famoso {
+    box-shadow: inset 0 0 35px rgba(255,220,0,.12);
+    border-color: rgba(255,220,0,.65);
+}
+
+.tokio {
+    box-shadow: inset 0 0 35px rgba(255,0,0,.14);
+    border-color: rgba(255,40,40,.7);
+}
+
+.cantina {
+    box-shadow: inset 0 0 35px rgba(255,0,0,.12);
+    border-color: rgba(255,70,70,.65);
+}
+
+.descarados {
+    box-shadow: inset 0 0 35px rgba(0,235,255,.12);
+    border-color: rgba(0,235,255,.7);
+}
+
+.tagline {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #ddd;
+    margin-bottom: 22px;
+}
+
+.enter {
+    width: 85%;
+    margin: auto;
+    padding: 16px 20px;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    display: block;
+    transition: .25s;
+}
+
+.enter:hover {
+    background: white;
+    color: black;
+}
+
+/* PIE */
+
+.features {
+    border-top: 1px solid #252525;
+    border-bottom: 1px solid #252525;
+    padding: 35px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    text-align: center;
+}
+
+.feature {
+    min-width: 130px;
+}
+
+.icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+    filter: grayscale(1);
+}
+
+.feature strong {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.feature span {
+    display: block;
+    color: #aaa;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    color: #777;
+    padding: 30px 15px 45px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    header {
+        padding-top: 25px;
+    }
+
+    .grupo-logo {
+        width: 94%;
+    }
+
+    .hero {
+        padding-top: 35px;
+    }
+
+    .hero-small {
+        font-size: 11px;
+        letter-spacing: 5px;
+    }
+
+    .hero-script {
+        font-size: 38px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .destination {
+        font-size: 10px;
+        letter-spacing: 6px;
+    }
+
+    .venues {
+        grid-template-columns: 1fr;
+        width: 92%;
+    }
+
+    .card {
+        min-height: 470px;
+    }
+
+    .card-logo {
+        max-height: 240px;
+    }
+
+    .features {
+        gap: 15px;
+        justify-content: space-around;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .feature {
+        min-width: auto;
+        width: 33%;
+    }
+
+    .feature strong {
+        font-size: 10px;
+    }
+
+    .feature span {
+        font-size: 9px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+    <img src="GRUPO P3-06.png"
+         alt="Grupo P3 Industria Nocturna"
+         class="grupo-logo">
+</header>
+
+<section class="hero">
+
+    <div class="hero-small">
+        CUATRO LUGARES
+    </div>
+
+    <div class="hero-script">
+        Grandes historias
+    </div>
+
+    <div class="pulse"></div>
+
+    <h1>
+        ¿CUÁL ES<br>
+        TU PLAN PARA HOY?
+    </h1>
+
+    <div class="destination">
+        ELIGE TU DESTINO
+    </div>
+
+</section>
+
+<main class="venues">
+
+    <!-- EL FAMOSO -->
+
+    <article class="card famoso">
+        <div class="card-content">
+
+            <img src="fam.png"
+                 alt="El Famoso Sinvergüenza"
+                 class="card-logo">
+
+            <div class="tagline">
+                SHOW • MÚSICA • DESPECHO
+            </div>
+
+            <a href="#"
+               class="enter">
+               ENTRAR →
+            </a>
+
+        </div>
+    </article>
+
+
+    <!-- TOKIO -->
+
+    <article class="card tokio">
+        <div class="card-content">
+
+            <img src="tokio logo.png"
+                 alt="Tokio Urbano"
+                 class="card-logo">
+
+            <div class="tagline">
+                URBANO • PERREO • PERFORMANCE
+            </div>
+
+            <a href="#"
+               class="enter">
+               ENTRAR →
+            </a>
+
+        </div>
+    </article>
+
+
+    <!-- LA CANTINA -->
+
+    <article class="card cantina">
+        <div class="card-content">
+
+            <img src="logo rojo la cantina.png"
+                 alt="La Cantina Modelia"
+                 class="card-logo">
+
+            <div class="tagline">
+                AMIGOS • TRAGOS • BUENA MÚSICA
+            </div>
+
+            <a href="#"
+               class="enter">
+               ENTRAR →
+            </a>
+
+        </div>
+    </article>
+
+
+    <!-- DESCARADOS -->
+
+    <article class="card descarados">
+        <div class="card-content">
+
+            <img src="DESCARADOS CANTINA.png"
+                 alt="Descarados Cantina"
+                 class="card-logo">
+
+            <div class="tagline">
+                DESCARADOS • TRAGOS • ACTITUD
+            </div>
+
+            <a href="#"
+               class="enter">
+               ENTRAR →
+            </a>
+
+        </div>
+    </article>
+
+</main>
+
+
+<section class="features">
+
+    <div class="feature">
+        <div class="icon">▣</div>
+        <strong>EVENTOS</strong>
+        <span>ACTUALIZADOS</span>
+    </div>
+
+    <div class="feature">
+        <div class="icon">♕</div>
+        <strong>RESERVAS</strong>
+        <span>RÁPIDAS</span>
+    </div>
+
+    <div class="feature">
+        <div class="icon">◉</div>
+        <strong>WHATSAPP</strong>
+        <span>DIRECTO</span>
+    </div>
+
+</section>
+
+
+<footer>
+    GRUPO P3 © 2026 | INDUSTRIA NOCTURNA
+</footer>
+
+</div>
+
+</body>
+</html>
