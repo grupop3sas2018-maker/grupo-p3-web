@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tokio Urbano | Grupo P3</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.page{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(220,0,0,.14), transparent 32%),
+        #050505;
+}
+
+/* HEADER */
+
+header{
+    max-width:1100px;
+    margin:auto;
+    padding:28px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.back{
+    color:#aaa;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+.back:hover{
+    color:#fff;
+}
+
+.group{
+    color:#777;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+/* HERO */
+
+.hero{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+    padding:60px 25px 40px;
+}
+
+.logo{
+    width:min(390px,80%);
+    height:190px;
+    object-fit:contain;
+    filter:drop-shadow(0 0 25px rgba(255,0,0,.35));
+}
+
+.eyebrow{
+    margin-top:25px;
+    font-size:11px;
+    letter-spacing:6px;
+    color:#aaa;
+}
+
+h1{
+    margin-top:12px;
+    font-size:clamp(34px,6vw,65px);
+    letter-spacing:-2px;
+}
+
+.subtitle{
+    margin:18px auto 0;
+    max-width:600px;
+    color:#aaa;
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* INFORMATION */
+
+.info{
+    max-width:850px;
+    margin:30px auto;
+    padding:0 25px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.info-card{
+    border:1px solid #252525;
+    border-radius:18px;
+    padding:22px 18px;
+    text-align:center;
+    background:rgba(255,255,255,.025);
+}
+
+.info-title{
+    font-size:9px;
+    letter-spacing:3px;
+    color:#777;
+    margin-bottom:9px;
+}
+
+.info-text{
+    font-size:13px;
+    line-height:1.5;
+}
+
+/* RESERVATION */
+
+.reservation{
+    max-width:650px;
+    margin:60px auto 0;
+    padding:0 25px 80px;
+}
+
+.reservation-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.reservation-title span{
+    color:#777;
+    font-size:10px;
+    letter-spacing:5px;
+}
+
+.reservation-title h2{
+    font-size:32px;
+    margin-top:10px;
+}
+
+.form{
+    border:1px solid #272727;
+    border-radius:25px;
+    padding:30px;
+    background:rgba(255,255,255,.025);
+}
+
+.field{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    font-size:10px;
+    letter-spacing:2px;
+    color:#888;
+    margin:0 0 8px 4px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    background:#0b0b0b;
+    color:#fff;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:15px;
+    outline:none;
+    font-size:14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#d71920;
+}
+
+textarea{
+    resize:vertical;
+    min-height:90px;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+button{
+    width:100%;
+    border:0;
+    border-radius:50px;
+    padding:17px;
+    margin-top:10px;
+    background:#fff;
+    color:#000;
+    font-weight:bold;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    background:#d71920;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.note{
+    color:#666;
+    text-align:center;
+    font-size:10px;
+    line-height:1.5;
+    margin-top:15px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #181818;
+    text-align:center;
+    padding:30px 20px;
+    color:#555;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .hero{
+        padding-top:30px;
+    }
+
+    .logo{
+        height:150px;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+    }
+
+    .row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .form{
+        padding:22px 18px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+
+<a href="index.html" class="back">
+← VOLVER
+</a>
+
+<div class="group">
+GRUPO P3
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<img src="tokio logo.png" class="logo" alt="Tokio Urbano">
+
+<div class="eyebrow">
+TOKIO URBANO
+</div>
+
+<h1>La noche es tuya.</h1>
+
+<p class="subtitle">
+Urbano, perreo, música, performance y una experiencia diseñada
+para vivir la noche en Modelia.
+</p>
+
+</section>
+
+
+<section class="info">
+
+<div class="info-card">
+
+<div class="info-title">
+UBICACIÓN
+</div>
+
+<div class="info-text">
+Calle 24C #75-34<br>
+Modelia · Bogotá
+</div>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-title">
+HORARIO
+</div>
+
+<div class="info-text">
+Viernes y sábado<br>
+5:00 PM — 5:00 AM<br><br>
+Domingo cuando el lunes es festivo
+</div>
+
+</div>
+
+
+<div class="info-card">
+
+<div class="info-title">
+CONTACTO
+</div>
+
+<div class="info-text">
+320 853 6104<br>
+Reservas por WhatsApp
+</div>
+
+</div>
+
+</section>
+
+
+<section class="reservation">
+
+<div class="reservation-title">
+
+<span>VIVE TOKIO</span>
+
+<h2>Reserva tu mesa</h2>
+
+</div>
+
+
+<div class="form">
+
+<div class="field">
+
+<label>NOMBRE</label>
+
+<input
+type="text"
+id="nombre"
+placeholder="Tu nombre"
+required>
+
+</div>
+
+
+<div class="field">
+
+<label>TELÉFONO</label>
+
+<input
+type="tel"
+id="telefono"
+placeholder="Tu número de contacto"
+required>
+
+</div>
+
+
+<div class="row">
+
+<div class="field">
+
+<label>FECHA</label>
+
+<input
+type="date"
+id="fecha"
+required>
+
+</div>
+
+
+<div class="field">
+
+<label>HORA</label>
+
+<input
+type="time"
+id="hora"
+required>
+
+</div>
+
+</div>
+
+
+<div class="field">
+
+<label>NÚMERO DE PERSONAS</label>
+
+<input
+type="number"
+id="personas"
+min="1"
+placeholder="Ej: 6"
+required>
+
+</div>
+
+
+<div class="field">
+
+<label>OBSERVACIONES</label>
+
+<textarea
+id="observaciones"
+placeholder="Cumpleaños, celebración, ubicación especial o alguna solicitud..."></textarea>
+
+</div>
+
+
+<button onclick="reservar()">
+RESERVAR POR WHATSAPP →
+</button>
+
+
+<div class="note">
+Al continuar serás dirigido a WhatsApp con la información de tu reserva.
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+GRUPO P3 · INDUSTRIA NOCTURNA · BOGOTÁ
+</footer>
+
+</div>
+
+
+<script>
+
+function reservar(){
+
+const nombre =
+document.getElementById("nombre").value.trim();
+
+const telefono =
+document.getElementById("telefono").value.trim();
+
+const fecha =
+document.getElementById("fecha").value;
+
+const hora =
+document.getElementById("hora").value;
+
+const personas =
+document.getElementById("personas").value;
+
+const observaciones =
+document.getElementById("observaciones").value.trim();
+
+
+if(!nombre || !telefono || !fecha || !hora || !personas){
+
+alert("Por favor completa los datos de la reserva.");
+
+return;
+
+}
+
+
+const mensaje =
+`🔥 NUEVA RESERVA — TOKIO URBANO
+
+👤 Nombre: ${nombre}
+📱 Teléfono: ${telefono}
+📅 Fecha: ${fecha}
+🕐 Hora: ${hora}
+👥 Personas: ${personas}
+
+📝 Observaciones:
+${observaciones || "Sin observaciones"}
+
+📍 Tokio Urbano
+Calle 24C #75-34 · Modelia`;
+
+
+const whatsapp =
+"https://wa.me/573208536104?text=" +
+encodeURIComponent(mensaje);
+
+
+window.open(whatsapp,"_blank");
+
+}
+
+</script>
+
+</body>
+</html>
