@@ -1,338 +1,669 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>La Cantina Modelia | Grupo P3</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #050505;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+body{
+    background:#050505;
+    color:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.page {
-    min-height: 100vh;
+.page{
+    min-height:100vh;
+
     background:
-        radial-gradient(circle at 50% 22%, rgba(255,0,0,.14), transparent 32%),
+        radial-gradient(
+            circle at 50% 22%,
+            rgba(255,0,0,.14),
+            transparent 33%
+        ),
         #050505;
 }
 
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 28px;
+
+/* =========================
+   CABECERA
+========================= */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 28px;
 }
 
-.topbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 2px;
+.topbar a{
+    color:#ffffff;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:2px;
 }
 
-.group {
-    font-size: 11px;
-    letter-spacing: 5px;
-    color: #aaa;
+.group{
+    font-size:11px;
+    letter-spacing:5px;
+    color:#888;
 }
 
-.hero {
-    text-align: center;
-    padding: 65px 20px 40px;
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    text-align:center;
+    padding:45px 20px 35px;
 }
 
-.logo {
-    width: 280px;
-    max-width: 70%;
-    margin-bottom: 45px;
+.logo{
+    width:270px;
+    max-width:72%;
+    margin-bottom:45px;
 }
 
-.eyebrow {
-    font-size: 11px;
-    letter-spacing: 7px;
-    color: #ff7777;
-    margin-bottom: 18px;
+.eyebrow{
+    font-size:10px;
+    letter-spacing:7px;
+    color:#ff7777;
+    margin-bottom:20px;
 }
 
-h1 {
-    font-size: clamp(45px, 6vw, 76px);
-    line-height: .98;
-    margin-bottom: 24px;
+.hero h1{
+    font-size:clamp(44px,6vw,72px);
+    line-height:1;
+    margin-bottom:24px;
 }
 
-.description {
-    color: #bcbcbc;
-    max-width: 620px;
-    margin: auto;
-    line-height: 1.7;
-    font-size: 15px;
+.description{
+    max-width:640px;
+    margin:auto;
+    color:#aaa;
+    line-height:1.7;
+    font-size:14px;
 }
 
-.info-grid {
-    width: min(1050px, 90%);
-    margin: 65px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.info{
+    width:min(1050px,90%);
+    margin:65px auto 35px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
-.info-card {
-    min-height: 145px;
-    border: 1px solid #292929;
-    border-radius: 20px;
-    padding: 30px 20px;
-    text-align: center;
-    background: rgba(255,255,255,.015);
+.info-card{
+    min-height:145px;
+
+    border:1px solid #292929;
+    border-radius:20px;
+
+    padding:30px 20px;
+    text-align:center;
+
+    background:
+        rgba(255,255,255,.015);
 }
 
-.info-title {
-    font-size: 9px;
-    letter-spacing: 5px;
-    color: #ff7777;
-    margin-bottom: 15px;
+.info-title{
+    font-size:9px;
+    letter-spacing:5px;
+    color:#ff7777;
+    margin-bottom:15px;
 }
 
-.info-card p {
-    font-size: 14px;
-    line-height: 1.5;
+.info-text{
+    font-size:14px;
+    line-height:1.55;
 }
 
-.reservation-section {
-    padding: 20px 20px 80px;
+
+/* =========================
+   EXPLORAR
+========================= */
+
+.explore-section{
+    width:min(850px,90%);
+    margin:35px auto 65px;
 }
 
-.reservation-heading {
-    text-align: center;
-    margin-bottom: 35px;
+.explore-box{
+    border:1px solid #272727;
+    border-radius:24px;
+
+    padding:38px 30px;
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,0,0,.10),
+            transparent 55%
+        ),
+        rgba(255,255,255,.02);
 }
 
-.reservation-heading span {
-    display: block;
-    font-size: 9px;
-    letter-spacing: 7px;
-    color: #ff7777;
-    margin-bottom: 12px;
+.explore-small{
+    font-size:9px;
+    letter-spacing:5px;
+    color:#ff7777;
+    margin-bottom:10px;
 }
 
-.reservation-heading h2 {
-    font-size: 34px;
+.explore-box h2{
+    font-size:30px;
+    margin-bottom:12px;
 }
 
-.form-box {
-    width: min(600px, 100%);
-    margin: auto;
-    padding: 32px;
-    border: 1px solid #292929;
-    border-radius: 25px;
-    background: rgba(255,255,255,.015);
+.explore-box p{
+    max-width:520px;
+    margin:0 auto 24px;
+
+    color:#999;
+    font-size:13px;
+    line-height:1.6;
 }
 
-.field {
-    margin-bottom: 18px;
+.explore-button{
+    width:min(380px,100%);
+    margin:auto;
+
+    display:block;
+
+    padding:16px 20px;
+
+    border:1px solid #ffffff;
+    border-radius:50px;
+
+    color:#ffffff;
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+    transition:.25s;
 }
 
-.field label {
-    display: block;
-    font-size: 9px;
-    letter-spacing: 3px;
-    color: #aaa;
-    margin: 0 0 9px 3px;
+.explore-button:hover{
+    background:#ffffff;
+    color:#000000;
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   RESERVAS
+========================= */
+
+.reservation-section{
+    padding:10px 20px 90px;
+}
+
+.reservation-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.reservation-heading span{
+    display:block;
+
+    font-size:9px;
+    letter-spacing:7px;
+    color:#ff7777;
+
+    margin-bottom:12px;
+}
+
+.reservation-heading h2{
+    font-size:34px;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.form-box{
+    width:min(600px,100%);
+    margin:auto;
+
+    padding:32px;
+
+    border:1px solid #292929;
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.015);
+}
+
+.field{
+    margin-bottom:18px;
+}
+
+.field label{
+    display:block;
+
+    font-size:9px;
+    letter-spacing:3px;
+    color:#aaa;
+
+    margin:0 0 9px 3px;
 }
 
 input,
-textarea {
-    width: 100%;
-    background: #090909;
-    border: 1px solid #292929;
-    color: white;
-    border-radius: 14px;
-    padding: 16px;
-    font-size: 14px;
-    outline: none;
+textarea{
+    width:100%;
+
+    background:#090909;
+    border:1px solid #292929;
+
+    color:#ffffff;
+
+    border-radius:14px;
+    padding:16px;
+
+    font-size:14px;
+    outline:none;
 }
 
 input:focus,
-textarea:focus {
-    border-color: #ff3c3c;
+textarea:focus{
+    border-color:#ff4444;
 }
 
-textarea {
-    min-height: 90px;
-    resize: vertical;
+textarea{
+    min-height:90px;
+    resize:vertical;
 }
 
-.double {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+.double{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
 }
 
-button {
-    width: 100%;
-    margin-top: 10px;
-    padding: 18px;
-    border: none;
-    border-radius: 50px;
-    background: white;
-    color: black;
-    font-weight: bold;
-    letter-spacing: 3px;
-    cursor: pointer;
+button{
+    width:100%;
+
+    margin-top:10px;
+    padding:18px;
+
+    border:none;
+    border-radius:50px;
+
+    background:#ffffff;
+    color:#000000;
+
+    font-weight:bold;
+    letter-spacing:3px;
+
+    cursor:pointer;
+    transition:.25s;
 }
 
-button:hover {
-    opacity: .85;
+button:hover{
+    opacity:.88;
+    transform:translateY(-1px);
 }
 
-.note {
-    text-align: center;
-    color: #666;
-    font-size: 9px;
-    margin-top: 18px;
+.note{
+    text-align:center;
+    color:#666;
+    font-size:9px;
+    margin-top:18px;
+    line-height:1.5;
 }
 
-@media (max-width: 700px) {
-    .hero {
-        padding-top: 45px;
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+
+    .topbar{
+        padding:18px;
     }
 
-    .logo {
-        width: 230px;
+    .hero{
+        padding-top:35px;
     }
 
-    .info-grid {
-        grid-template-columns: 1fr;
+    .logo{
+        width:220px;
+        margin-bottom:35px;
     }
 
-    .double {
-        grid-template-columns: 1fr;
+    .hero h1{
+        font-size:43px;
     }
 
-    .form-box {
-        padding: 22px;
+    .info{
+        grid-template-columns:1fr;
+        margin-top:45px;
     }
+
+    .explore-section{
+        margin-top:25px;
+    }
+
+    .explore-box{
+        padding:32px 20px;
+    }
+
+    .double{
+        grid-template-columns:1fr;
+    }
+
+    .form-box{
+        padding:24px 20px;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
 <div class="page">
 
+
+<!-- =========================
+     CABECERA
+========================= -->
+
 <header class="topbar">
-    <a href="index.html">← VOLVER</a>
-    <div class="group">GRUPO P3</div>
+
+    <a href="index.html">
+        ← VOLVER
+    </a>
+
+    <div class="group">
+        GRUPO P3
+    </div>
+
 </header>
+
+
+<!-- =========================
+     PRESENTACIÓN
+========================= -->
 
 <section class="hero">
 
-    <img src="logo rojo la cantina.png" class="logo" alt="La Cantina Modelia">
+    <img
+        src="logo rojo la cantina.png"
+        class="logo"
+        alt="La Cantina Modelia"
+    >
 
-    <div class="eyebrow">LA CANTINA MODELLIA</div>
+    <div class="eyebrow">
+        LA CANTINA MODELLIA
+    </div>
 
-    <h1>Tragos, amigos<br>y buena música.</h1>
+    <h1>
+        Tragos, amigos<br>
+        y buena música.
+    </h1>
 
     <p class="description">
-        Un lugar para encontrarse, brindar y vivir la noche de Modelia
-        todos los días.
+        Un lugar para encontrarse, brindar
+        y vivir la noche de Modelia todos los días.
     </p>
 
 </section>
 
-<section class="info-grid">
+
+<!-- =========================
+     DATOS DEL NEGOCIO
+========================= -->
+
+<section class="info">
 
     <div class="info-card">
-        <div class="info-title">UBICACIÓN</div>
-        <p>
-            Calle 24C #80B-35<br>
+
+        <div class="info-title">
+            UBICACIÓN
+        </div>
+
+        <div class="info-text">
+            Calle 24C #80B-35
+            <br>
             Modelia · Bogotá
-        </p>
+        </div>
+
     </div>
 
+
     <div class="info-card">
-        <div class="info-title">HORARIO</div>
-        <p>
-            Todos los días<br>
+
+        <div class="info-title">
+            HORARIO
+        </div>
+
+        <div class="info-text">
+            Todos los días
+            <br>
             5:00 PM — 5:00 AM
-        </p>
+        </div>
+
     </div>
 
+
     <div class="info-card">
-        <div class="info-title">CONTACTO</div>
-        <p>
-            320 853 6104<br>
+
+        <div class="info-title">
+            CONTACTO
+        </div>
+
+        <div class="info-text">
+            320 853 6104
+            <br>
             Reservas por WhatsApp
-        </p>
+        </div>
+
     </div>
 
 </section>
 
+
+<!-- =========================
+     EXPLORAR
+========================= -->
+
+<section class="explore-section">
+
+    <div class="explore-box">
+
+        <div class="explore-small">
+            CONOCE LA CANTINA
+        </div>
+
+        <h2>
+            Explora el negocio
+        </h2>
+
+        <p>
+            Consulta nuestra carta, conoce el lugar
+            y encuentra más información de
+            La Cantina Modelia.
+        </p>
+
+        <a
+            href="https://linktr.ee/lacantinatienda"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="explore-button"
+        >
+            EXPLORAR LA CANTINA →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESERVA
+========================= -->
+
 <section class="reservation-section">
 
     <div class="reservation-heading">
-        <span>VIVE LA CANTINA</span>
-        <h2>Reserva tu mesa</h2>
+
+        <span>
+            VIVE LA CANTINA
+        </span>
+
+        <h2>
+            Reserva tu mesa
+        </h2>
+
     </div>
+
 
     <div class="form-box">
 
         <form id="reservaForm">
 
-            <div class="field">
-                <label>NOMBRE</label>
-                <input id="nombre" type="text" required>
-            </div>
 
             <div class="field">
-                <label>TELÉFONO</label>
-                <input id="telefono" type="tel" required>
+
+                <label>
+                    NOMBRE
+                </label>
+
+                <input
+                    id="nombre"
+                    type="text"
+                    required
+                >
+
             </div>
+
+
+            <div class="field">
+
+                <label>
+                    TELÉFONO
+                </label>
+
+                <input
+                    id="telefono"
+                    type="tel"
+                    required
+                >
+
+            </div>
+
 
             <div class="double">
 
-                <div class="field">
-                    <label>FECHA</label>
-                    <input id="fecha" type="date" required>
-                </div>
 
                 <div class="field">
-                    <label>HORA</label>
-                    <input id="hora" type="time" required>
+
+                    <label>
+                        FECHA
+                    </label>
+
+                    <input
+                        id="fecha"
+                        type="date"
+                        required
+                    >
+
                 </div>
 
+
+                <div class="field">
+
+                    <label>
+                        HORA
+                    </label>
+
+                    <input
+                        id="hora"
+                        type="time"
+                        required
+                    >
+
+                </div>
+
+
             </div>
 
-            <div class="field">
-                <label>NÚMERO DE PERSONAS</label>
-                <input id="personas" type="number" min="1" required>
-            </div>
 
             <div class="field">
-                <label>OBSERVACIONES</label>
-                <textarea id="observaciones"
-                placeholder="Cumpleaños, ubicación preferida, celebración..."></textarea>
+
+                <label>
+                    NÚMERO DE PERSONAS
+                </label>
+
+                <input
+                    id="personas"
+                    type="number"
+                    min="1"
+                    required
+                >
+
             </div>
+
+
+            <div class="field">
+
+                <label>
+                    OBSERVACIONES
+                </label>
+
+                <textarea
+                    id="observaciones"
+                    placeholder="Cumpleaños, ubicación preferida, celebración..."
+                ></textarea>
+
+            </div>
+
 
             <button type="submit">
                 RESERVAR POR WHATSAPP →
             </button>
 
+
             <div class="note">
-                Al continuar serás dirigido a WhatsApp con la información de tu reserva.
+                Al continuar serás dirigido
+                a WhatsApp con la información
+                de tu reserva.
             </div>
+
 
         </form>
 
@@ -340,42 +671,134 @@ button:hover {
 
 </section>
 
+
 </div>
+
 
 <script>
 
-document.getElementById("reservaForm").addEventListener("submit", function(e) {
+/* =========================
+   FORMULARIO DE RESERVA
+========================= */
 
-    e.preventDefault();
+document
+.getElementById("reservaForm")
+.addEventListener(
+    "submit",
+    function(e){
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const telefono = document.getElementById("telefono").value.trim();
-    const fecha = document.getElementById("fecha").value;
-    const hora = document.getElementById("hora").value;
-    const personas = document.getElementById("personas").value;
-    const observaciones = document.getElementById("observaciones").value.trim();
+        e.preventDefault();
 
-    if (!nombre || !telefono || !fecha || !hora || !personas) {
-        alert("Por favor completa los datos de la reserva.");
-        return;
-    }
 
-    const partesFecha = fecha.split("-");
-    const fechaFormateada =
-        `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
+        const nombre =
+            document
+            .getElementById("nombre")
+            .value
+            .trim();
 
-    const partesHora = hora.split(":");
-    let horaNumero = parseInt(partesHora[0]);
-    const minutos = partesHora[1];
-    const periodo = horaNumero >= 12 ? "PM" : "AM";
 
-    horaNumero = horaNumero % 12;
-    horaNumero = horaNumero || 12;
+        const telefono =
+            document
+            .getElementById("telefono")
+            .value
+            .trim();
 
-    const horaFormateada =
-        `${horaNumero}:${minutos} ${periodo}`;
 
-    const mensaje =
+        const fecha =
+            document
+            .getElementById("fecha")
+            .value;
+
+
+        const hora =
+            document
+            .getElementById("hora")
+            .value;
+
+
+        const personas =
+            document
+            .getElementById("personas")
+            .value;
+
+
+        const observaciones =
+            document
+            .getElementById("observaciones")
+            .value
+            .trim();
+
+
+        if(
+            !nombre ||
+            !telefono ||
+            !fecha ||
+            !hora ||
+            !personas
+        ){
+
+            alert(
+                "Por favor completa los datos de la reserva."
+            );
+
+            return;
+
+        }
+
+
+        /* =========================
+           FORMATEAR FECHA
+        ========================= */
+
+        const partesFecha =
+            fecha.split("-");
+
+
+        const fechaFormateada =
+            `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
+
+
+        /* =========================
+           FORMATEAR HORA
+        ========================= */
+
+        const partesHora =
+            hora.split(":");
+
+
+        let horaNumero =
+            parseInt(
+                partesHora[0]
+            );
+
+
+        const minutos =
+            partesHora[1];
+
+
+        const periodo =
+            horaNumero >= 12
+            ? "PM"
+            : "AM";
+
+
+        horaNumero =
+            horaNumero % 12;
+
+
+        horaNumero =
+            horaNumero || 12;
+
+
+        const horaFormateada =
+            `${horaNumero}:${minutos} ${periodo}`;
+
+
+        /* =========================
+           MENSAJE WHATSAPP
+        ========================= */
+
+        const mensaje =
 `*NUEVA RESERVA — LA CANTINA MODELLIA*
 ━━━━━━━━━━━━━━━━
 
@@ -391,37 +814,94 @@ ${observaciones || "Sin observaciones"}
 *LA CANTINA MODELLIA*
 Calle 24C #80B-35 · Modelia`;
 
-    const datosSheets = new URLSearchParams();
 
-    datosSheets.append("negocio", "LA CANTINA MODELLIA");
-    datosSheets.append("nombre", nombre);
-    datosSheets.append("telefono", telefono);
-    datosSheets.append("fecha", fechaFormateada);
-    datosSheets.append("hora", horaFormateada);
-    datosSheets.append("personas", personas);
-    datosSheets.append(
-        "observaciones",
-        observaciones || "Sin observaciones"
-    );
+        /* =========================
+           GOOGLE SHEETS
+        ========================= */
 
-    const urlSheets =
-    "https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec?" +
-    datosSheets.toString();
+        const datosSheets =
+            new URLSearchParams();
 
-    fetch(urlSheets, {
-        method: "POST",
-        mode: "no-cors"
-    });
 
-    const whatsapp =
-    "https://wa.me/573208536104?text=" +
-    encodeURIComponent(mensaje);
+        datosSheets.append(
+            "negocio",
+            "LA CANTINA MODELLIA"
+        );
 
-    window.open(whatsapp, "_blank");
 
-});
+        datosSheets.append(
+            "nombre",
+            nombre
+        );
+
+
+        datosSheets.append(
+            "telefono",
+            telefono
+        );
+
+
+        datosSheets.append(
+            "fecha",
+            fechaFormateada
+        );
+
+
+        datosSheets.append(
+            "hora",
+            horaFormateada
+        );
+
+
+        datosSheets.append(
+            "personas",
+            personas
+        );
+
+
+        datosSheets.append(
+            "observaciones",
+            observaciones ||
+            "Sin observaciones"
+        );
+
+
+        const urlSheets =
+            "https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec?" +
+            datosSheets.toString();
+
+
+        fetch(
+            urlSheets,
+            {
+                method:"POST",
+                mode:"no-cors"
+            }
+        );
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        const whatsapp =
+            "https://wa.me/573208536104?text=" +
+            encodeURIComponent(
+                mensaje
+            );
+
+
+        window.open(
+            whatsapp,
+            "_blank"
+        );
+
+    }
+);
 
 </script>
 
+
 </body>
+
 </html>
