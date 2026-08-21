@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>El Famoso Sinvergüenza | Grupo P3</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 25%, rgba(255,215,0,.08), transparent 32%),
+        #050505;
+}
+
+/* CABECERA */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 28px;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.group {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: #aaa;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.logo {
+    width: 230px;
+    max-width: 65%;
+    margin-bottom: 50px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 7px;
+    color: #d8c26e;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: .95;
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #bcbcbc;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* INFORMACIÓN */
+
+.info-grid {
+    width: min(1050px, 90%);
+    margin: 65px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.info-card {
+    min-height: 145px;
+    border: 1px solid #292929;
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(255,255,255,.015);
+}
+
+.info-title {
+    font-size: 9px;
+    letter-spacing: 5px;
+    color: #a99c6a;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* RESERVA */
+
+.reservation-section {
+    padding: 20px 20px 80px;
+}
+
+.reservation-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.reservation-heading span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 7px;
+    color: #a99c6a;
+    margin-bottom: 12px;
+}
+
+.reservation-heading h2 {
+    font-size: 34px;
+}
+
+.form-box {
+    width: min(600px, 100%);
+    margin: auto;
+    padding: 32px;
+    border: 1px solid #292929;
+    border-radius: 25px;
+    background: rgba(255,255,255,.015);
+}
+
+.field {
+    margin-bottom: 18px;
+}
+
+.field label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #aaa;
+    margin: 0 0 9px 3px;
+}
+
+input,
+textarea {
+    width: 100%;
+    background: #090909;
+    border: 1px solid #292929;
+    color: white;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #d5bd4d;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 18px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .85;
+}
+
+.note {
+    text-align: center;
+    color: #666;
+    font-size: 9px;
+    margin-top: 18px;
+}
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding-top: 45px;
+    }
+
+    .logo {
+        width: 190px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .double {
+        grid-template-columns: 1fr;
+    }
+
+    .form-box {
+        padding: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<header class="topbar">
+    <a href="index.html">← VOLVER</a>
+    <div class="group">GRUPO P3</div>
+</header>
+
+<section class="hero">
+
+    <img src="fam.png" class="logo" alt="El Famoso Sinvergüenza">
+
+    <div class="eyebrow">EL FAMOSO SINVERGÜENZA</div>
+
+    <h1>Donde el corazón<br>sale cantando.</h1>
+
+    <p class="description">
+        Música, despecho, buenos tragos y una noche para cantar
+        esas canciones que todos conocemos.
+    </p>
+
+</section>
+
+<section class="info-grid">
+
+    <div class="info-card">
+        <div class="info-title">UBICACIÓN</div>
+        <p>
+            Calle 24C #75-43<br>
+            Modelia · Bogotá
+        </p>
+    </div>
+
+    <div class="info-card">
+        <div class="info-title">HORARIO</div>
+        <p>
+            Miércoles a domingo<br>
+            5:00 PM — 5:00 AM
+        </p>
+    </div>
+
+    <div class="info-card">
+        <div class="info-title">CONTACTO</div>
+        <p>
+            320 853 6104<br>
+            Reservas por WhatsApp
+        </p>
+    </div>
+
+</section>
+
+<section class="reservation-section">
+
+    <div class="reservation-heading">
+        <span>VIVE EL FAMOSO</span>
+        <h2>Reserva tu mesa</h2>
+    </div>
+
+    <div class="form-box">
+
+        <form id="reservaForm">
+
+            <div class="field">
+                <label>NOMBRE</label>
+                <input id="nombre" type="text" required>
+            </div>
+
+            <div class="field">
+                <label>TELÉFONO</label>
+                <input id="telefono" type="tel" required>
+            </div>
+
+            <div class="double">
+
+                <div class="field">
+                    <label>FECHA</label>
+                    <input id="fecha" type="date" required>
+                </div>
+
+                <div class="field">
+                    <label>HORA</label>
+                    <input id="hora" type="time" required>
+                </div>
+
+            </div>
+
+            <div class="field">
+                <label>NÚMERO DE PERSONAS</label>
+                <input id="personas" type="number" min="1" required>
+            </div>
+
+            <div class="field">
+                <label>OBSERVACIONES</label>
+                <textarea id="observaciones"
+                placeholder="Cumpleaños, ubicación preferida, celebración..."></textarea>
+            </div>
+
+            <button type="submit">
+                RESERVAR POR WHATSAPP →
+            </button>
+
+            <div class="note">
+                Al continuar serás dirigido a WhatsApp con la información de tu reserva.
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+</div>
+
+<script>
+
+document.getElementById("reservaForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const telefono = document.getElementById("telefono").value.trim();
+    const fecha = document.getElementById("fecha").value;
+    const hora = document.getElementById("hora").value;
+    const personas = document.getElementById("personas").value;
+    const observaciones = document.getElementById("observaciones").value.trim();
+
+    if (!nombre || !telefono || !fecha || !hora || !personas) {
+        alert("Por favor completa los datos de la reserva.");
+        return;
+    }
+
+    /* FORMATEAR FECHA */
+
+    const partesFecha = fecha.split("-");
+    const fechaFormateada =
+        `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
+
+    /* FORMATEAR HORA */
+
+    const partesHora = hora.split(":");
+    let horaNumero = parseInt(partesHora[0]);
+    const minutos = partesHora[1];
+    const periodo = horaNumero >= 12 ? "PM" : "AM";
+
+    horaNumero = horaNumero % 12;
+    horaNumero = horaNumero || 12;
+
+    const horaFormateada =
+        `${horaNumero}:${minutos} ${periodo}`;
+
+    /* MENSAJE WHATSAPP */
+
+    const mensaje =
+`*NUEVA RESERVA — EL FAMOSO SINVERGÜENZA*
+____________________
+
+👤 *Nombre:* ${nombre}
+📱 *Teléfono:* ${telefono}
+📅 *Fecha:* ${fechaFormateada}
+🕐 *Hora:* ${horaFormateada}
+👥 *Personas:* ${personas}
+
+📝 *Observaciones:*
+${observaciones || "Sin observaciones"}
+
+📍 *EL FAMOSO SINVERGÜENZA*
+Calle 24C #75-43 · Modelia`;
+
+    /* GOOGLE SHEETS */
+
+    const datosSheets = new URLSearchParams();
+
+    datosSheets.append("negocio", "EL FAMOSO SINVERGÜENZA");
+    datosSheets.append("nombre", nombre);
+    datosSheets.append("telefono", telefono);
+    datosSheets.append("fecha", fechaFormateada);
+    datosSheets.append("hora", horaFormateada);
+    datosSheets.append("personas", personas);
+    datosSheets.append(
+        "observaciones",
+        observaciones || "Sin observaciones"
+    );
+
+    const urlSheets =
+    "https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec?" +
+    datosSheets.toString();
+
+    fetch(urlSheets, {
+        method: "POST",
+        mode: "no-cors"
+    });
+
+    /* ABRIR WHATSAPP */
+
+    const whatsapp =
+    "https://wa.me/573208536104?text=" +
+    encodeURIComponent(mensaje);
+
+    window.open(whatsapp, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
