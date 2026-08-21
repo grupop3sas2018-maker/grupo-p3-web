@@ -142,32 +142,29 @@ header {
     text-align: center;
 }
 
+/* CAJA VISUAL UNIFORME DE LOGOS */
+
+.logo-box {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .card-logo {
-    width: 85%;
-    max-height: 270px;
+    width: 260px;
+    height: 260px;
     object-fit: contain;
-    margin: 0 auto 30px;
     display: block;
 }
+
+/* COLORES DE CADA NEGOCIO */
 
 .famoso {
     box-shadow: inset 0 0 35px rgba(255,220,0,.12);
     border-color: rgba(255,220,0,.65);
-}
-
-.famoso .card-logo {
-    width: 100%;
-    transform: scale(1.65);
-}
-    
-.cantina .card-logo {
-    width: 70%;
-    transform: scale(0.85);
-}
-
-.descarados .card-logo {
-    width: 80%;
-    transform: scale(0.90);
 }
 
 .tokio {
@@ -298,8 +295,13 @@ footer {
         min-height: 470px;
     }
 
+    .logo-box {
+        height: 250px;
+    }
+
     .card-logo {
-        max-height: 240px;
+        width: 225px;
+        height: 225px;
     }
 
     .features {
@@ -365,9 +367,11 @@ footer {
     <article class="card famoso">
         <div class="card-content">
 
-            <img src="fam.png"
-                 alt="El Famoso Sinvergüenza"
-                 class="card-logo">
+            <div class="logo-box">
+                <img src="famoso.png"
+                     alt="El Famoso Sinvergüenza"
+                     class="card-logo">
+            </div>
 
             <div class="tagline">
                 SHOW • MÚSICA • DESPECHO
@@ -387,9 +391,11 @@ footer {
     <article class="card tokio">
         <div class="card-content">
 
-            <img src="tokio logo.png"
-                 alt="Tokio Urbano"
-                 class="card-logo">
+            <div class="logo-box">
+                <img src="tokio.png"
+                     alt="Tokio Urbano"
+                     class="card-logo">
+            </div>
 
             <div class="tagline">
                 URBANO • PERREO • PERFORMANCE
@@ -409,9 +415,11 @@ footer {
     <article class="card cantina">
         <div class="card-content">
 
-            <img src="logo rojo la cantina.png"
-                 alt="La Cantina Modelia"
-                 class="card-logo">
+            <div class="logo-box">
+                <img src="cantina.png"
+                     alt="La Cantina Modelia"
+                     class="card-logo">
+            </div>
 
             <div class="tagline">
                 AMIGOS • TRAGOS • BUENA MÚSICA
@@ -431,9 +439,11 @@ footer {
     <article class="card descarados">
         <div class="card-content">
 
-            <img src="DESCARADOS CANTINA.png"
-                 alt="Descarados Cantina"
-                 class="card-logo">
+            <div class="logo-box">
+                <img src="descarados.png"
+                     alt="Descarados Cantina"
+                     class="card-logo">
+            </div>
 
             <div class="tagline">
                 DESCARADOS • TRAGOS • ACTITUD
