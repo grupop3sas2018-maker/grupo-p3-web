@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,356 +10,634 @@
 
 <style>
 
+/* =========================
+   GENERAL
+========================= */
+
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#050505;
-    color:#fff;
+    color:#ffffff;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 .page{
     min-height:100vh;
+
     background:
-        radial-gradient(circle at 50% 20%, rgba(220,0,0,.14), transparent 32%),
+        radial-gradient(
+            circle at 50% 22%,
+            rgba(180,0,0,.17),
+            transparent 33%
+        ),
         #050505;
 }
 
-/* HEADER */
 
-header{
-    max-width:1100px;
-    margin:auto;
-    padding:28px 25px;
+/* =========================
+   CABECERA
+========================= */
+
+.topbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
+
+    padding:22px 28px;
 }
 
-.back{
-    color:#aaa;
+.topbar a{
+    color:#ffffff;
     text-decoration:none;
-    font-size:13px;
-    letter-spacing:1px;
-}
 
-.back:hover{
-    color:#fff;
+    font-size:13px;
+    letter-spacing:2px;
 }
 
 .group{
-    color:#777;
     font-size:11px;
-    letter-spacing:3px;
+    letter-spacing:5px;
+    color:#888;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    max-width:1000px;
-    margin:auto;
     text-align:center;
-    padding:60px 25px 40px;
+
+    padding:
+        45px
+        20px
+        35px;
 }
 
 .logo{
-    width:min(390px,80%);
-    height:190px;
-    object-fit:contain;
-    filter:drop-shadow(0 0 25px rgba(255,0,0,.35));
+    width:230px;
+    max-width:65%;
+
+    margin-bottom:45px;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(255,0,0,.35)
+        );
 }
 
 .eyebrow{
-    margin-top:25px;
-    font-size:11px;
-    letter-spacing:6px;
+    font-size:10px;
+
+    letter-spacing:7px;
+
     color:#aaa;
+
+    margin-bottom:20px;
 }
 
-h1{
-    margin-top:12px;
-    font-size:clamp(34px,6vw,65px);
-    letter-spacing:-2px;
+.hero h1{
+    font-size:
+        clamp(
+            46px,
+            6vw,
+            72px
+        );
+
+    line-height:1;
+
+    margin-bottom:24px;
 }
 
-.subtitle{
-    margin:18px auto 0;
-    max-width:600px;
+.description{
+    max-width:620px;
+
+    margin:auto;
+
     color:#aaa;
-    font-size:14px;
+
     line-height:1.7;
+
+    font-size:14px;
 }
 
-/* INFORMATION */
+
+/* =========================
+   INFORMACIÓN
+========================= */
 
 .info{
-    max-width:850px;
-    margin:30px auto;
-    padding:0 25px;
+    width:min(1050px,90%);
+
+    margin:
+        65px
+        auto
+        35px;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:12px;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:15px;
 }
 
 .info-card{
-    border:1px solid #252525;
-    border-radius:18px;
-    padding:22px 18px;
+    min-height:145px;
+
+    border:
+        1px solid
+        #292929;
+
+    border-radius:20px;
+
+    padding:
+        30px
+        20px;
+
     text-align:center;
-    background:rgba(255,255,255,.025);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .015
+        );
 }
 
 .info-title{
     font-size:9px;
-    letter-spacing:3px;
-    color:#777;
-    margin-bottom:9px;
+
+    letter-spacing:5px;
+
+    color:#888;
+
+    margin-bottom:15px;
 }
 
 .info-text{
-    font-size:13px;
-    line-height:1.5;
+    font-size:14px;
+
+    line-height:1.55;
 }
 
-/* EXPLORAR */
+
+/* =========================
+   EXPLORAR TOKIO
+========================= */
 
 .explore-section{
-    max-width:850px;
-    margin:35px auto 10px;
-    padding:0 25px;
+    width:min(850px,90%);
+
+    margin:
+        35px
+        auto
+        65px;
 }
 
 .explore-box{
-    border:1px solid #272727;
+    border:
+        1px solid
+        #272727;
+
     border-radius:24px;
-    padding:38px 30px;
+
+    padding:
+        38px
+        30px;
+
     text-align:center;
+
     background:
-        radial-gradient(circle at 50% 0%, rgba(215,25,32,.12), transparent 55%),
-        rgba(255,255,255,.02);
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(215,25,32,.12),
+            transparent 55%
+        ),
+        rgba(
+            255,
+            255,
+            255,
+            .02
+        );
 }
 
 .explore-small{
     font-size:9px;
+
     letter-spacing:5px;
+
     color:#888;
+
     margin-bottom:10px;
 }
 
 .explore-box h2{
     font-size:30px;
+
     margin-bottom:12px;
 }
 
 .explore-box p{
     max-width:520px;
-    margin:0 auto 24px;
+
+    margin:
+        0
+        auto
+        24px;
+
     color:#999;
+
     font-size:13px;
+
     line-height:1.6;
 }
 
 .explore-button{
     width:min(360px,100%);
+
     margin:auto;
+
     display:block;
-    padding:16px 20px;
-    border:1px solid #fff;
+
+    padding:
+        16px
+        20px;
+
+    border:
+        1px solid
+        #ffffff;
+
     border-radius:50px;
-    color:#fff;
+
+    color:#ffffff;
+
     text-decoration:none;
+
     font-size:12px;
+
     font-weight:bold;
+
     letter-spacing:2px;
+
     transition:.25s;
 }
 
 .explore-button:hover{
-    background:#fff;
-    color:#000;
-    transform:translateY(-2px);
+    background:#ffffff;
+
+    color:#000000;
+
+    transform:
+        translateY(-2px);
 }
 
-/* RESERVATION */
 
-.reservation{
-    max-width:650px;
-    margin:60px auto 0;
-    padding:0 25px 80px;
+/* =========================
+   RESERVAS
+========================= */
+
+.reservation-section{
+    padding:
+        10px
+        20px
+        90px;
 }
 
-.reservation-title{
+.reservation-heading{
     text-align:center;
-    margin-bottom:30px;
+
+    margin-bottom:35px;
 }
 
-.reservation-title span{
-    color:#777;
-    font-size:10px;
-    letter-spacing:5px;
+.reservation-heading span{
+    display:block;
+
+    font-size:9px;
+
+    letter-spacing:7px;
+
+    color:#888;
+
+    margin-bottom:12px;
 }
 
-.reservation-title h2{
-    font-size:32px;
-    margin-top:10px;
+.reservation-heading h2{
+    font-size:34px;
 }
 
-.form{
-    border:1px solid #272727;
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.form-box{
+    width:min(600px,100%);
+
+    margin:auto;
+
+    padding:32px;
+
+    border:
+        1px solid
+        #292929;
+
     border-radius:25px;
-    padding:30px;
-    background:rgba(255,255,255,.025);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .015
+        );
 }
 
 .field{
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
-label{
+.field label{
     display:block;
-    font-size:10px;
-    letter-spacing:2px;
-    color:#888;
-    margin:0 0 8px 4px;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+
+    color:#aaa;
+
+    margin:
+        0
+        0
+        9px
+        3px;
 }
 
 input,
-select,
 textarea{
     width:100%;
-    background:#0b0b0b;
-    color:#fff;
-    border:1px solid #292929;
-    border-radius:12px;
-    padding:15px;
-    outline:none;
+
+    background:#090909;
+
+    border:
+        1px solid
+        #292929;
+
+    color:#ffffff;
+
+    border-radius:14px;
+
+    padding:16px;
+
     font-size:14px;
+
+    outline:none;
 }
 
 input:focus,
-select:focus,
 textarea:focus{
-    border-color:#d71920;
+    border-color:#c82026;
 }
 
 textarea{
-    resize:vertical;
     min-height:90px;
+
+    resize:vertical;
 }
 
-.row{
+.double{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:14px;
 }
 
 button{
     width:100%;
-    border:0;
-    border-radius:50px;
-    padding:17px;
+
     margin-top:10px;
-    background:#fff;
-    color:#000;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ffffff;
+
+    color:#000000;
+
     font-weight:bold;
-    letter-spacing:2px;
+
+    letter-spacing:3px;
+
     cursor:pointer;
+
     transition:.25s;
 }
 
 button:hover{
-    background:#d71920;
-    color:#fff;
-    transform:translateY(-2px);
+    opacity:.88;
+
+    transform:
+        translateY(-1px);
 }
 
 .note{
+    text-align:center;
+
     color:#666;
-    text-align:center;
-    font-size:10px;
+
+    font-size:9px;
+
+    margin-top:18px;
+
     line-height:1.5;
-    margin-top:15px;
 }
 
-/* FOOTER */
 
-footer{
-    border-top:1px solid #181818;
-    text-align:center;
-    padding:30px 20px;
-    color:#555;
-    font-size:10px;
-    letter-spacing:2px;
-}
-
-/* MOBILE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:700px){
 
+    .topbar{
+        padding:
+            18px
+            18px;
+    }
+
     .hero{
-        padding-top:30px;
+        padding-top:35px;
     }
 
     .logo{
-        height:150px;
+        width:190px;
+
+        margin-bottom:35px;
+    }
+
+    .hero h1{
+        font-size:45px;
     }
 
     .info{
         grid-template-columns:1fr;
+
+        margin-top:45px;
     }
 
-    .row{
+    .explore-section{
+        margin-top:25px;
+    }
+
+    .explore-box{
+        padding:
+            32px
+            20px;
+    }
+
+    .double{
         grid-template-columns:1fr;
-        gap:0;
     }
 
-    .form{
-        padding:22px 18px;
+    .form-box{
+        padding:
+            24px
+            20px;
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 <div class="page">
 
-<header>
 
-<a href="index.html" class="back">
-← VOLVER
-</a>
+<!-- =========================
+     CABECERA
+========================= -->
 
-<div class="group">
-GRUPO P3
-</div>
+<header class="topbar">
+
+    <a href="index.html">
+        ← VOLVER
+    </a>
+
+    <div class="group">
+        GRUPO P3
+    </div>
 
 </header>
 
 
+<!-- =========================
+     PRESENTACIÓN
+========================= -->
+
 <section class="hero">
 
-<img src="tokio logo.png" class="logo" alt="Tokio Urbano">
+    <img
+        src="tokio logo.png"
+        class="logo"
+        alt="Tokio Urbano"
+    >
 
-<div class="eyebrow">
-TOKIO URBANO
-</div>
+    <div class="eyebrow">
+        TOKIO URBANO
+    </div>
 
-<h1>La noche es tuya.</h1>
+    <h1>
+        La noche es tuya.
+    </h1>
 
-<p class="subtitle">
-Urbano, perreo, música, performance y una experiencia diseñada
-para vivir la noche en Modelia.
-</p>
+    <p class="description">
+        Urbano, perreo, música, performance
+        y una experiencia diseñada para vivir
+        la noche en Modelia.
+    </p>
 
 </section>
 
+
+<!-- =========================
+     DATOS DEL NEGOCIO
+========================= -->
+
+<section class="info">
+
+    <div class="info-card">
+
+        <div class="info-title">
+            UBICACIÓN
+        </div>
+
+        <div class="info-text">
+            Calle 24C #75-34
+            <br>
+            Modelia · Bogotá
+        </div>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-title">
+            HORARIO
+        </div>
+
+        <div class="info-text">
+            Viernes y sábado
+            <br>
+            5:00 PM — 5:00 AM
+            <br><br>
+            Domingo cuando el lunes es festivo
+        </div>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-title">
+            CONTACTO
+        </div>
+
+        <div class="info-text">
+            320 853 6104
+            <br>
+            Reservas por WhatsApp
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPLORAR
+========================= -->
 
 <section class="explore-section">
 
@@ -372,7 +652,8 @@ para vivir la noche en Modelia.
         </h2>
 
         <p>
-            Consulta nuestra carta, conoce el lugar y encuentra
+            Consulta nuestra carta,
+            conoce el lugar y encuentra
             más información de Tokio Urbano.
         </p>
 
@@ -380,7 +661,8 @@ para vivir la noche en Modelia.
             href="https://linktr.ee/tokiourbanobar"
             target="_blank"
             rel="noopener noreferrer"
-            class="explore-button">
+            class="explore-button"
+        >
             EXPLORAR TOKIO →
         </a>
 
@@ -389,167 +671,286 @@ para vivir la noche en Modelia.
 </section>
 
 
-<section class="reservation">
+<!-- =========================
+     RESERVA
+========================= -->
 
-<div class="reservation-title">
+<section class="reservation-section">
 
-<span>VIVE TOKIO</span>
+    <div class="reservation-heading">
 
-<h2>Reserva tu mesa</h2>
+        <span>
+            VIVE TOKIO
+        </span>
 
-</div>
+        <h2>
+            Reserva tu mesa
+        </h2>
 
-
-<div class="form">
-
-<div class="field">
-
-<label>NOMBRE</label>
-
-<input
-type="text"
-id="nombre"
-placeholder="Tu nombre"
-required>
-
-</div>
+    </div>
 
 
-<div class="field">
+    <div class="form-box">
 
-<label>TELÉFONO</label>
-
-<input
-type="tel"
-id="telefono"
-placeholder="Tu número de contacto"
-required>
-
-</div>
+        <form id="reservaForm">
 
 
-<div class="row">
+            <div class="field">
 
-<div class="field">
+                <label>
+                    NOMBRE
+                </label>
 
-<label>FECHA</label>
+                <input
+                    id="nombre"
+                    type="text"
+                    required
+                >
 
-<input
-type="date"
-id="fecha"
-required>
-
-</div>
-
-
-<div class="field">
-
-<label>HORA</label>
-
-<input
-type="time"
-id="hora"
-required>
-
-</div>
-
-</div>
+            </div>
 
 
-<div class="field">
+            <div class="field">
 
-<label>NÚMERO DE PERSONAS</label>
+                <label>
+                    TELÉFONO
+                </label>
 
-<input
-type="number"
-id="personas"
-min="1"
-placeholder="Ej: 6"
-required>
+                <input
+                    id="telefono"
+                    type="tel"
+                    required
+                >
 
-</div>
-
-
-<div class="field">
-
-<label>OBSERVACIONES</label>
-
-<textarea
-id="observaciones"
-placeholder="Cumpleaños, celebración, ubicación especial o alguna solicitud..."></textarea>
-
-</div>
+            </div>
 
 
-<button onclick="reservar()">
-RESERVAR POR WHATSAPP →
-</button>
+            <div class="double">
 
 
-<div class="note">
-Al continuar serás dirigido a WhatsApp con la información de tu reserva.
-</div>
+                <div class="field">
 
-</div>
+                    <label>
+                        FECHA
+                    </label>
+
+                    <input
+                        id="fecha"
+                        type="date"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        HORA
+                    </label>
+
+                    <input
+                        id="hora"
+                        type="time"
+                        required
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <div class="field">
+
+                <label>
+                    NÚMERO DE PERSONAS
+                </label>
+
+                <input
+                    id="personas"
+                    type="number"
+                    min="1"
+                    required
+                >
+
+            </div>
+
+
+            <div class="field">
+
+                <label>
+                    OBSERVACIONES
+                </label>
+
+                <textarea
+                    id="observaciones"
+                    placeholder="Cumpleaños, ubicación preferida, celebración..."
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit">
+
+                RESERVAR POR WHATSAPP →
+
+            </button>
+
+
+            <div class="note">
+
+                Al continuar serás dirigido
+                a WhatsApp con la información
+                de tu reserva.
+
+            </div>
+
+
+        </form>
+
+    </div>
 
 </section>
 
-
-<footer>
-GRUPO P3 · INDUSTRIA NOCTURNA · BOGOTÁ
-</footer>
 
 </div>
 
 
 <script>
 
-function reservar(){
+/* =========================
+   FORMULARIO DE RESERVA
+========================= */
 
-const nombre =
-document.getElementById("nombre").value.trim();
+document
+.getElementById("reservaForm")
+.addEventListener(
+    "submit",
+    function(e){
 
-const telefono =
-document.getElementById("telefono").value.trim();
-
-const fecha =
-document.getElementById("fecha").value;
-
-const hora =
-document.getElementById("hora").value;
-
-const personas =
-document.getElementById("personas").value;
-
-const observaciones =
-document.getElementById("observaciones").value.trim();
+        e.preventDefault();
 
 
-if(!nombre || !telefono || !fecha || !hora || !personas){
+        /* DATOS DEL FORMULARIO */
 
-alert("Por favor completa los datos de la reserva.");
+        const nombre =
+            document
+            .getElementById("nombre")
+            .value
+            .trim();
 
-return;
 
-}
+        const telefono =
+            document
+            .getElementById("telefono")
+            .value
+            .trim();
 
 
-// Formatear fecha: 2026-08-22 → 22/08/2026
-const partesFecha = fecha.split("-");
-const fechaFormateada = `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
+        const fecha =
+            document
+            .getElementById("fecha")
+            .value;
 
-// Formatear hora: 21:30 → 9:30 PM
-const partesHora = hora.split(":");
-let horaNumero = parseInt(partesHora[0]);
-const minutos = partesHora[1];
-const periodo = horaNumero >= 12 ? "PM" : "AM";
 
-horaNumero = horaNumero % 12;
-horaNumero = horaNumero || 12;
+        const hora =
+            document
+            .getElementById("hora")
+            .value;
 
-const horaFormateada = `${horaNumero}:${minutos} ${periodo}`;
 
-const mensaje =
+        const personas =
+            document
+            .getElementById("personas")
+            .value;
+
+
+        const observaciones =
+            document
+            .getElementById("observaciones")
+            .value
+            .trim();
+
+
+
+        /* VALIDACIÓN */
+
+        if(
+            !nombre ||
+            !telefono ||
+            !fecha ||
+            !hora ||
+            !personas
+        ){
+
+            alert(
+                "Por favor completa los datos de la reserva."
+            );
+
+            return;
+
+        }
+
+
+
+        /* =========================
+           FORMATEAR FECHA
+           2026-08-22 → 22/08/2026
+        ========================= */
+
+        const partesFecha =
+            fecha.split("-");
+
+
+        const fechaFormateada =
+            `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
+
+
+
+        /* =========================
+           FORMATEAR HORA
+           21:30 → 9:30 PM
+        ========================= */
+
+        const partesHora =
+            hora.split(":");
+
+
+        let horaNumero =
+            parseInt(
+                partesHora[0]
+            );
+
+
+        const minutos =
+            partesHora[1];
+
+
+        const periodo =
+            horaNumero >= 12
+            ? "PM"
+            : "AM";
+
+
+        horaNumero =
+            horaNumero % 12;
+
+
+        horaNumero =
+            horaNumero || 12;
+
+
+        const horaFormateada =
+            `${horaNumero}:${minutos} ${periodo}`;
+
+
+
+        /* =========================
+           MENSAJE WHATSAPP
+        ========================= */
+
+        const mensaje =
 `*NUEVA RESERVA — TOKIO URBANO*
 ━━━━━━━━━━━━━━━━
 
@@ -565,38 +966,98 @@ ${observaciones || "Sin observaciones"}
 *TOKIO URBANO*
 Calle 24C #75-34 · Modelia`;
 
-const datosSheets = new URLSearchParams();
 
-datosSheets.append("negocio", "TOKIO URBANO");
-datosSheets.append("nombre", nombre);
-datosSheets.append("telefono", telefono);
-datosSheets.append("fecha", fechaFormateada);
-datosSheets.append("hora", horaFormateada);
-datosSheets.append("personas", personas);
-datosSheets.append(
-    "observaciones",
-    observaciones || "Sin observaciones"
+
+        /* =========================
+           GOOGLE SHEETS
+        ========================= */
+
+        const datosSheets =
+            new URLSearchParams();
+
+
+        datosSheets.append(
+            "negocio",
+            "TOKIO URBANO"
+        );
+
+
+        datosSheets.append(
+            "nombre",
+            nombre
+        );
+
+
+        datosSheets.append(
+            "telefono",
+            telefono
+        );
+
+
+        datosSheets.append(
+            "fecha",
+            fechaFormateada
+        );
+
+
+        datosSheets.append(
+            "hora",
+            horaFormateada
+        );
+
+
+        datosSheets.append(
+            "personas",
+            personas
+        );
+
+
+        datosSheets.append(
+            "observaciones",
+            observaciones ||
+            "Sin observaciones"
+        );
+
+
+
+        const urlSheets =
+            "https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec?" +
+            datosSheets.toString();
+
+
+
+        fetch(
+            urlSheets,
+            {
+                method:"POST",
+                mode:"no-cors"
+            }
+        );
+
+
+
+        /* =========================
+           WHATSAPP
+        ========================= */
+
+        const whatsapp =
+            "https://wa.me/573208536104?text=" +
+            encodeURIComponent(
+                mensaje
+            );
+
+
+        window.open(
+            whatsapp,
+            "_blank"
+        );
+
+    }
 );
-
-const urlSheets =
-"https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec?" +
-datosSheets.toString();
-
-fetch(urlSheets, {
-    method: "POST",
-    mode: "no-cors"
-});
-    
-const whatsapp =
-"https://wa.me/573208536104?text=" +
-encodeURIComponent(mensaje);
-
-
-window.open(whatsapp,"_blank");
-
-}
 
 </script>
 
+
 </body>
+
 </html>
