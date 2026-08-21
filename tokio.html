@@ -492,19 +492,34 @@ return;
 }
 
 
+// Formatear fecha: 2026-08-22 → 22/08/2026
+const partesFecha = fecha.split("-");
+const fechaFormateada = `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
+
+// Formatear hora: 21:30 → 9:30 PM
+const partesHora = hora.split(":");
+let horaNumero = parseInt(partesHora[0]);
+const minutos = partesHora[1];
+const periodo = horaNumero >= 12 ? "PM" : "AM";
+
+horaNumero = horaNumero % 12;
+horaNumero = horaNumero || 12;
+
+const horaFormateada = `${horaNumero}:${minutos} ${periodo}`;
+
 const mensaje =
-`🔥 NUEVA RESERVA — TOKIO URBANO
+`NUEVA RESERVA — TOKIO URBANO
 
-👤 Nombre: ${nombre}
-📱 Teléfono: ${telefono}
-📅 Fecha: ${fecha}
-🕐 Hora: ${hora}
-👥 Personas: ${personas}
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Fecha: ${fechaFormateada}
+Hora: ${horaFormateada}
+Personas: ${personas}
 
-📝 Observaciones:
+Observaciones:
 ${observaciones || "Sin observaciones"}
 
-📍 Tokio Urbano
+Tokio Urbano
 Calle 24C #75-34 · Modelia`;
 
 
