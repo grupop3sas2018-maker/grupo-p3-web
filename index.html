@@ -30,7 +30,9 @@ body {
         #050505;
 }
 
-/* CABECERA */
+/* =========================
+   CABECERA
+========================= */
 
 header {
     width: 100%;
@@ -47,7 +49,9 @@ header {
     display: block;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     text-align: center;
@@ -96,7 +100,9 @@ header {
     color: #ccc;
 }
 
-/* NEGOCIOS */
+/* =========================
+   NEGOCIOS
+========================= */
 
 .venues {
     width: min(1100px, 94%);
@@ -112,14 +118,26 @@ header {
     border: 1px solid #333;
     border-radius: 25px;
     overflow: hidden;
+
     background:
-        radial-gradient(circle at top, rgba(255,255,255,.08), transparent 45%),
-        linear-gradient(180deg, #111, #050505);
+        radial-gradient(
+            circle at top,
+            rgba(255,255,255,.08),
+            transparent 45%
+        ),
+        linear-gradient(
+            180deg,
+            #111,
+            #050505
+        );
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+
     padding: 35px 28px;
+
     transition: .35s ease;
 }
 
@@ -131,7 +149,15 @@ header {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 25%, rgba(0,0,0,.15) 50%, #050505 100%);
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 25%,
+            rgba(0,0,0,.15) 50%,
+            #050505 100%
+        );
+
     pointer-events: none;
 }
 
@@ -142,45 +168,74 @@ header {
     text-align: center;
 }
 
-/* CAJA VISUAL UNIFORME DE LOGOS */
+/* =========================
+   LOGOS
+   Los cuatro archivos son
+   PNG 1080 x 1080
+========================= */
 
 .logo-box {
     width: 100%;
-    height: 290px;
+    height: 310px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+
+    margin-bottom: 10px;
+
+    overflow: visible;
 }
 
 .card-logo {
-    width: 260px;
-    height: 260px;
+    width: 430px;
+    height: 430px;
+    max-width: 100%;
+
     object-fit: contain;
+
     display: block;
 }
 
-/* COLORES DE CADA NEGOCIO */
+/* =========================
+   COLORES DE LAS TARJETAS
+========================= */
 
 .famoso {
-    box-shadow: inset 0 0 35px rgba(255,220,0,.12);
-    border-color: rgba(255,220,0,.65);
+    box-shadow:
+        inset 0 0 35px rgba(255,220,0,.12);
+
+    border-color:
+        rgba(255,220,0,.65);
 }
 
 .tokio {
-    box-shadow: inset 0 0 35px rgba(255,0,0,.14);
-    border-color: rgba(255,40,40,.7);
+    box-shadow:
+        inset 0 0 35px rgba(255,0,0,.14);
+
+    border-color:
+        rgba(255,40,40,.7);
 }
 
 .cantina {
-    box-shadow: inset 0 0 35px rgba(255,0,0,.12);
-    border-color: rgba(255,70,70,.65);
+    box-shadow:
+        inset 0 0 35px rgba(255,0,0,.12);
+
+    border-color:
+        rgba(255,70,70,.65);
 }
 
 .descarados {
-    box-shadow: inset 0 0 35px rgba(0,235,255,.12);
-    border-color: rgba(0,235,255,.7);
+    box-shadow:
+        inset 0 0 35px rgba(0,235,255,.12);
+
+    border-color:
+        rgba(0,235,255,.7);
 }
+
+/* =========================
+   TEXTO DE CADA NEGOCIO
+========================= */
 
 .tagline {
     font-size: 14px;
@@ -189,18 +244,29 @@ header {
     margin-bottom: 22px;
 }
 
+/* =========================
+   BOTÓN ENTRAR
+========================= */
+
 .enter {
     width: 85%;
     margin: auto;
+
     padding: 16px 20px;
+
     border: 1px solid white;
     border-radius: 50px;
+
     text-decoration: none;
+
     color: white;
+
     font-size: 15px;
     font-weight: 800;
     letter-spacing: 2px;
+
     display: block;
+
     transition: .25s;
 }
 
@@ -209,15 +275,21 @@ header {
     color: black;
 }
 
-/* PIE */
+/* =========================
+   PIE / CARACTERÍSTICAS
+========================= */
 
 .features {
     border-top: 1px solid #252525;
     border-bottom: 1px solid #252525;
+
     padding: 35px 20px;
+
     display: flex;
     justify-content: center;
+
     gap: 70px;
+
     text-align: center;
 }
 
@@ -233,26 +305,39 @@ header {
 
 .feature strong {
     display: block;
+
     font-size: 13px;
     letter-spacing: 1px;
 }
 
 .feature span {
     display: block;
+
     color: #aaa;
+
     font-size: 11px;
+
     margin-top: 5px;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer {
     text-align: center;
+
     color: #777;
+
     padding: 30px 15px 45px;
+
     font-size: 11px;
     letter-spacing: 2px;
 }
 
-/* CELULAR */
+/* =========================
+   CELULAR
+========================= */
 
 @media (max-width: 700px) {
 
@@ -293,20 +378,24 @@ footer {
 
     .card {
         min-height: 470px;
+        padding: 30px 20px;
     }
 
     .logo-box {
-        height: 250px;
+        height: 280px;
+        margin-bottom: 5px;
     }
 
     .card-logo {
-        width: 225px;
-        height: 225px;
+        width: 390px;
+        height: 390px;
+        max-width: 100%;
     }
 
     .features {
         gap: 15px;
         justify-content: space-around;
+
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -324,6 +413,7 @@ footer {
         font-size: 9px;
     }
 }
+
 </style>
 </head>
 
@@ -331,11 +421,24 @@ footer {
 
 <div class="page">
 
+<!-- =========================
+     LOGO GRUPO P3
+========================= -->
+
 <header>
-    <img src="GRUPO P3-06.png"
-         alt="Grupo P3 Industria Nocturna"
-         class="grupo-logo">
+
+    <img
+        src="GRUPO P3-06.png"
+        alt="Grupo P3 Industria Nocturna"
+        class="grupo-logo"
+    >
+
 </header>
+
+
+<!-- =========================
+     PRESENTACIÓN
+========================= -->
 
 <section class="hero">
 
@@ -360,132 +463,220 @@ footer {
 
 </section>
 
+
+<!-- =========================
+     NEGOCIOS
+========================= -->
+
 <main class="venues">
 
-    <!-- EL FAMOSO -->
+
+    <!-- =====================
+         EL FAMOSO
+    ====================== -->
 
     <article class="card famoso">
+
         <div class="card-content">
 
             <div class="logo-box">
-                <img src="famoso.png"
-                     alt="El Famoso Sinvergüenza"
-                     class="card-logo">
+
+                <img
+                    src="famoso.png"
+                    alt="El Famoso Sinvergüenza"
+                    class="card-logo"
+                >
+
             </div>
 
             <div class="tagline">
                 SHOW • MÚSICA • DESPECHO
             </div>
 
-            <a href="famoso.html"
-               class="enter">
-               ENTRAR →
+            <a
+                href="famoso.html"
+                class="enter"
+            >
+                ENTRAR →
             </a>
 
         </div>
+
     </article>
 
 
-    <!-- TOKIO -->
+    <!-- =====================
+         TOKIO URBANO
+    ====================== -->
 
     <article class="card tokio">
+
         <div class="card-content">
 
             <div class="logo-box">
-                <img src="tokio.png"
-                     alt="Tokio Urbano"
-                     class="card-logo">
+
+                <img
+                    src="tokio.png"
+                    alt="Tokio Urbano"
+                    class="card-logo"
+                >
+
             </div>
 
             <div class="tagline">
                 URBANO • PERREO • PERFORMANCE
             </div>
 
-            <a href="tokio.html"
-               class="enter">
-               ENTRAR →
+            <a
+                href="tokio.html"
+                class="enter"
+            >
+                ENTRAR →
             </a>
 
         </div>
+
     </article>
 
 
-    <!-- LA CANTINA -->
+    <!-- =====================
+         LA CANTINA
+    ====================== -->
 
     <article class="card cantina">
+
         <div class="card-content">
 
             <div class="logo-box">
-                <img src="cantina.png"
-                     alt="La Cantina Modelia"
-                     class="card-logo">
+
+                <img
+                    src="cantina.png"
+                    alt="La Cantina Modelia"
+                    class="card-logo"
+                >
+
             </div>
 
             <div class="tagline">
                 AMIGOS • TRAGOS • BUENA MÚSICA
             </div>
 
-            <a href="cantina.html"
-               class="enter">
-               ENTRAR →
+            <a
+                href="cantina.html"
+                class="enter"
+            >
+                ENTRAR →
             </a>
 
         </div>
+
     </article>
 
 
-    <!-- DESCARADOS -->
+    <!-- =====================
+         DESCARADOS
+    ====================== -->
 
     <article class="card descarados">
+
         <div class="card-content">
 
             <div class="logo-box">
-                <img src="descarados.png"
-                     alt="Descarados Cantina"
-                     class="card-logo">
+
+                <img
+                    src="descarados.png"
+                    alt="Descarados Cantina"
+                    class="card-logo"
+                >
+
             </div>
 
             <div class="tagline">
                 DESCARADOS • TRAGOS • ACTITUD
             </div>
 
-            <a href="descarados.html"
-               class="enter">
-               ENTRAR →
+            <a
+                href="descarados.html"
+                class="enter"
+            >
+                ENTRAR →
             </a>
 
         </div>
+
     </article>
+
 
 </main>
 
 
+<!-- =========================
+     CARACTERÍSTICAS
+========================= -->
+
 <section class="features">
 
     <div class="feature">
-        <div class="icon">▣</div>
-        <strong>EVENTOS</strong>
-        <span>ACTUALIZADOS</span>
+
+        <div class="icon">
+            ▣
+        </div>
+
+        <strong>
+            EVENTOS
+        </strong>
+
+        <span>
+            ACTUALIZADOS
+        </span>
+
     </div>
 
-    <div class="feature">
-        <div class="icon">♕</div>
-        <strong>RESERVAS</strong>
-        <span>RÁPIDAS</span>
-    </div>
 
     <div class="feature">
-        <div class="icon">◉</div>
-        <strong>WHATSAPP</strong>
-        <span>DIRECTO</span>
+
+        <div class="icon">
+            ♕
+        </div>
+
+        <strong>
+            RESERVAS
+        </strong>
+
+        <span>
+            RÁPIDAS
+        </span>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="icon">
+            ◉
+        </div>
+
+        <strong>
+            WHATSAPP
+        </strong>
+
+        <span>
+            DIRECTO
+        </span>
+
     </div>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
     GRUPO P3 © 2026 | INDUSTRIA NOCTURNA
 </footer>
+
 
 </div>
 
