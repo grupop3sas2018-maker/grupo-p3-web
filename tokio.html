@@ -536,14 +536,14 @@ datosSheets.append(
     observaciones || "Sin observaciones"
 );
 
-fetch(
-    "https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec",
-    {
-        method: "POST",
-        mode: "no-cors",
-        body: datosSheets
-    }
-);
+const urlSheets =
+"https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec?" +
+datosSheets.toString();
+
+fetch(urlSheets, {
+    method: "POST",
+    mode: "no-cors"
+});
     
 const whatsapp =
 "https://wa.me/573208536104?text=" +
