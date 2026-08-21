@@ -523,7 +523,29 @@ ${observaciones || "Sin observaciones"}
 *TOKIO URBANO*
 Calle 24C #75-34 · Modelia`;
 
+const datosReserva = {
+    negocio: "TOKIO URBANO",
+    nombre: nombre,
+    telefono: telefono,
+    fecha: fechaFormateada,
+    hora: horaFormateada,
+    personas: personas,
+    observaciones: observaciones || "Sin observaciones"
+};
 
+fetch(
+    "https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec",
+    {
+        method: "POST",
+        mode: "no-cors",
+        keepalive: true,
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(datosReserva)
+    }
+);
+    
 const whatsapp =
 "https://wa.me/573208536104?text=" +
 encodeURIComponent(mensaje);
