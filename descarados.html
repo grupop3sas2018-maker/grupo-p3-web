@@ -10,10 +10,6 @@
 
 <style>
 
-/* =========================
-   GENERAL
-========================= */
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -133,7 +129,6 @@ body{
 .experience-line span{
     border:1px solid #292929;
     border-radius:50px;
-
     padding:9px 13px;
 
     background:rgba(255,255,255,.025);
@@ -141,7 +136,6 @@ body{
     font-size:9px;
     font-weight:bold;
     letter-spacing:1.3px;
-
     color:#ddd;
 }
 
@@ -262,7 +256,7 @@ body{
 
 .reservation-heading{
     text-align:center;
-    margin-bottom:32px;
+    margin-bottom:28px;
 }
 
 .reservation-heading span{
@@ -285,6 +279,126 @@ body{
     color:#999;
     font-size:13px;
     line-height:1.6;
+}
+
+
+/* =========================
+   LINKTREE ANTES DEL FORM
+========================= */
+
+.pre-info{
+    width:min(600px,100%);
+    margin:0 auto 30px;
+
+    padding:22px;
+
+    border:1px solid #292929;
+    border-radius:20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,235,255,.045),
+            rgba(255,0,140,.045),
+            rgba(255,220,0,.025)
+        );
+}
+
+.pre-info-title{
+    color:#ffffff;
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    margin-bottom:9px;
+}
+
+.pre-info p{
+    color:#888;
+
+    font-size:11px;
+    line-height:1.6;
+
+    margin-bottom:16px;
+}
+
+.plan-button{
+    width:100%;
+
+    display:block;
+
+    padding:16px 18px;
+
+    border:1px solid #50eaff;
+    border-radius:50px;
+
+    color:#ffffff;
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,235,255,.08),
+            rgba(255,0,140,.08),
+            rgba(255,220,0,.05)
+        );
+
+    transition:.25s;
+}
+
+.plan-button:hover{
+    transform:translateY(-2px);
+    border-color:#ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,235,255,.15),
+            rgba(255,0,140,.15),
+            rgba(255,220,0,.10)
+        );
+}
+
+
+/* =========================
+   SEPARADOR
+========================= */
+
+.reserve-divider{
+    width:min(600px,100%);
+
+    margin:0 auto 28px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    color:#777;
+
+    font-size:9px;
+    font-weight:bold;
+    letter-spacing:3px;
+    text-align:center;
+}
+
+.reserve-divider::before,
+.reserve-divider::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:#292929;
+}
+
+.reserve-divider span{
+    white-space:nowrap;
 }
 
 
@@ -409,72 +523,6 @@ input[type="time"]::-webkit-calendar-picker-indicator{
 
 
 /* =========================
-   LINKTREE / SEGUNDO BOTÓN
-========================= */
-
-.more-plan{
-    width:min(600px,100%);
-
-    margin:25px auto 0;
-
-    padding-top:25px;
-
-    border-top:1px solid #242424;
-
-    text-align:center;
-}
-
-.more-plan p{
-    color:#777;
-    font-size:11px;
-    line-height:1.6;
-    margin-bottom:14px;
-}
-
-.plan-button{
-    width:100%;
-
-    display:block;
-
-    padding:17px 20px;
-
-    border:1px solid #50eaff;
-    border-radius:50px;
-
-    color:#ffffff;
-    text-decoration:none;
-
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,235,255,.07),
-            rgba(255,0,140,.07),
-            rgba(255,220,0,.05)
-        );
-
-    transition:.25s;
-}
-
-.plan-button:hover{
-    transform:translateY(-2px);
-
-    border-color:#ffffff;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,235,255,.14),
-            rgba(255,0,140,.14),
-            rgba(255,220,0,.10)
-        );
-}
-
-
-/* =========================
    FOOTER
 ========================= */
 
@@ -556,6 +604,20 @@ footer{
         border-radius:24px;
     }
 
+    .pre-info{
+        padding:20px 15px;
+    }
+
+    .plan-button{
+        font-size:11px;
+        letter-spacing:1.5px;
+    }
+
+    .reserve-divider{
+        gap:10px;
+        letter-spacing:2px;
+    }
+
     .double{
         grid-template-columns:1fr;
     }
@@ -576,10 +638,6 @@ footer{
 
 <div class="page">
 
-
-<!-- =========================
-     CABECERA
-========================= -->
 
 <header class="topbar">
 
@@ -617,8 +675,10 @@ footer{
 
     <p class="description">
         Aquí usted viene a hacer lo que en otros bares no lo dejan.
-        <strong>Sea su propio bartender, pida la música que quiera,
-        coma, cante y baile.</strong>
+        <strong>
+            Sea su propio bartender, pida la música que quiera,
+            coma, cante y baile.
+        </strong>
     </p>
 
 
@@ -646,7 +706,7 @@ footer{
 
 
 <!-- =========================
-     DATOS DEL NEGOCIO
+     INFORMACIÓN
 ========================= -->
 
 <section class="info">
@@ -699,12 +759,13 @@ footer{
 
 
 <!-- =========================
-     RESERVA + LINKTREE
+     RESERVA
 ========================= -->
 
 <section class="reservation-section">
 
     <div class="reservation-shell">
+
 
         <div class="reservation-heading">
 
@@ -722,6 +783,46 @@ footer{
 
         </div>
 
+
+        <!-- =========================
+             INFORMACIÓN / LINKTREE
+        ========================== -->
+
+        <div class="pre-info">
+
+            <div class="pre-info-title">
+                ¿QUIERE CHISMOSEAR PRIMERO?
+            </div>
+
+            <p>
+                Carta, redes, planes y todo lo que está
+                pasando en Descarados.
+            </p>
+
+            <a
+                href="https://linktr.ee/descaradosfonda"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="plan-button"
+            >
+                ¿QUÉ HAY PA' HACER, MIJO? →
+            </a>
+
+        </div>
+
+
+        <div class="reserve-divider">
+
+            <span>
+                O RESERVE DE UNA ↓
+            </span>
+
+        </div>
+
+
+        <!-- =========================
+             FORMULARIO
+        ========================== -->
 
         <div class="form-box">
 
@@ -844,29 +945,6 @@ footer{
 
             </form>
 
-
-            <!-- =========================
-                 LINKTREE
-            ========================== -->
-
-            <div class="more-plan">
-
-                <p>
-                    Carta, redes, planes y todo lo que está pasando en Descarados.
-                </p>
-
-                <a
-                    href="https://linktr.ee/descaradosfonda"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="plan-button"
-                >
-                    ¿QUÉ HAY PA' HACER, MIJO? →
-                </a>
-
-            </div>
-
-
         </div>
 
     </div>
@@ -931,8 +1009,7 @@ document
                     campo.showPicker();
                 }
                 catch(error){
-                    /* El navegador usará
-                       su selector nativo */
+                    /* Selector nativo */
                 }
 
             }
@@ -1090,9 +1167,9 @@ Calle 83 #14A-07 · Zona T`;
 
 
         /*
-        IMPORTANTE:
-        Por ahora conservamos este nombre
-        para no romper el color automático
+        Conservamos temporalmente
+        DESCARADOS CANTINA aquí para
+        mantener el color automático
         de la hoja de reservas.
         */
 
@@ -1154,7 +1231,7 @@ Calle 83 #14A-07 · Zona T`;
 
 
         /* =========================
-           WHATSAPP DESCARADOS
+           WHATSAPP
         ========================= */
 
         const whatsapp =
