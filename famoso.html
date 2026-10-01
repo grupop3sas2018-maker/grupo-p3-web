@@ -32,18 +32,13 @@ body{
 
 .page{
     min-height:100vh;
+    overflow:hidden;
 
     background:
-        radial-gradient(
-            circle at 50% 22%,
-            rgba(255,220,0,.10),
-            transparent 33%
-        ),
-        radial-gradient(
-            circle at 58% 26%,
-            rgba(255,0,180,.06),
-            transparent 24%
-        ),
+        radial-gradient(circle at 15% 12%, rgba(140,50,255,.16), transparent 27%),
+        radial-gradient(circle at 85% 18%, rgba(255,210,0,.10), transparent 26%),
+        radial-gradient(circle at 25% 58%, rgba(110,30,190,.10), transparent 26%),
+        radial-gradient(circle at 82% 72%, rgba(255,255,255,.035), transparent 28%),
         #050505;
 }
 
@@ -79,42 +74,96 @@ body{
 
 .hero{
     text-align:center;
-    padding:45px 20px 35px;
+    padding:25px 20px 45px;
 }
 
 .logo{
-    width:360px;
-    max-width:80%;
+    width:430px;
+    max-width:88%;
     height:auto;
     object-fit:contain;
-    margin-bottom:35px;
+    margin-bottom:20px;
 
     filter:
-        drop-shadow(
-            0 0 25px
-            rgba(255,220,0,.20)
-        );
+        drop-shadow(0 0 24px rgba(145,65,255,.18))
+        drop-shadow(0 0 30px rgba(255,215,0,.07));
 }
 
 .eyebrow{
     font-size:10px;
     letter-spacing:7px;
-    color:#cbbb78;
+    color:#ffd83d;
     margin-bottom:20px;
+    font-weight:bold;
 }
 
 .hero h1{
-    font-size:clamp(44px,6vw,72px);
-    line-height:1;
-    margin-bottom:24px;
+    max-width:850px;
+    margin:0 auto 22px;
+
+    font-size:clamp(42px,6vw,74px);
+    line-height:.98;
+    letter-spacing:-2px;
+    font-weight:900;
 }
 
 .description{
-    max-width:650px;
+    max-width:690px;
     margin:auto;
+
     color:#aaa;
     line-height:1.7;
-    font-size:14px;
+    font-size:15px;
+}
+
+.description strong{
+    color:#ffffff;
+}
+
+
+/* =========================
+   EXPERIENCIAS
+========================= */
+
+.experience-line{
+    max-width:850px;
+    margin:30px auto 0;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+}
+
+.experience-line span{
+    border:1px solid #292929;
+    border-radius:50px;
+
+    padding:9px 13px;
+
+    background:rgba(255,255,255,.025);
+
+    font-size:9px;
+    font-weight:bold;
+    letter-spacing:1.3px;
+
+    color:#ddd;
+}
+
+.experience-line span:nth-child(1){
+    border-color:rgba(155,75,255,.60);
+}
+
+.experience-line span:nth-child(2){
+    border-color:rgba(255,215,0,.55);
+}
+
+.experience-line span:nth-child(3){
+    border-color:rgba(255,255,255,.30);
+}
+
+.experience-line span:nth-child(4){
+    border-color:rgba(155,75,255,.45);
 }
 
 
@@ -124,7 +173,7 @@ body{
 
 .info{
     width:min(1050px,90%);
-    margin:65px auto 35px;
+    margin:50px auto 35px;
 
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -133,20 +182,53 @@ body{
 
 .info-card{
     min-height:145px;
+
     border:1px solid #292929;
     border-radius:20px;
+
     padding:30px 20px;
     text-align:center;
 
     background:
-        rgba(255,255,255,.015);
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.025),
+            rgba(255,255,255,.01)
+        );
+
+    transition:.25s;
+}
+
+.info-card:hover{
+    transform:translateY(-3px);
+    border-color:#444;
+}
+
+.info-card:nth-child(1){
+    box-shadow:inset 0 1px rgba(155,75,255,.35);
+}
+
+.info-card:nth-child(2){
+    box-shadow:inset 0 1px rgba(255,215,0,.30);
+}
+
+.info-card:nth-child(3){
+    box-shadow:inset 0 1px rgba(255,255,255,.20);
 }
 
 .info-title{
     font-size:9px;
     letter-spacing:5px;
-    color:#bbaa66;
+    color:#b77cff;
     margin-bottom:15px;
+}
+
+.info-card:nth-child(2) .info-title{
+    color:#ffd83d;
+}
+
+.info-card:nth-child(3) .info-title{
+    color:#ffffff;
 }
 
 .info-text{
@@ -156,103 +238,180 @@ body{
 
 
 /* =========================
-   EXPLORAR
+   RESERVAS
 ========================= */
 
-.explore-section{
-    width:min(850px,90%);
-    margin:35px auto 65px;
+.reservation-section{
+    width:min(850px,92%);
+    margin:55px auto 0;
+    padding-bottom:90px;
 }
 
-.explore-box{
-    border:1px solid #272727;
-    border-radius:24px;
-    padding:38px 30px;
-    text-align:center;
+.reservation-shell{
+    position:relative;
+
+    border:1px solid #303030;
+    border-radius:30px;
+
+    padding:45px;
 
     background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(255,220,0,.09),
-            transparent 55%
-        ),
-        radial-gradient(
-            circle at 65% 10%,
-            rgba(255,0,180,.05),
-            transparent 45%
-        ),
-        rgba(255,255,255,.02);
+        radial-gradient(circle at 0% 0%, rgba(140,50,255,.11), transparent 35%),
+        radial-gradient(circle at 100% 0%, rgba(255,215,0,.07), transparent 35%),
+        radial-gradient(circle at 50% 100%, rgba(255,255,255,.025), transparent 40%),
+        rgba(255,255,255,.015);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35);
 }
 
-.explore-small{
+.reservation-heading{
+    text-align:center;
+    margin-bottom:28px;
+}
+
+.reservation-heading span{
+    display:block;
+
     font-size:9px;
-    letter-spacing:5px;
-    color:#a99a61;
-    margin-bottom:10px;
-}
+    letter-spacing:7px;
 
-.explore-box h2{
-    font-size:30px;
+    color:#ffd83d;
+
     margin-bottom:12px;
 }
 
-.explore-box p{
-    max-width:520px;
-    margin:0 auto 24px;
+.reservation-heading h2{
+    font-size:clamp(30px,5vw,42px);
+    margin-bottom:12px;
+}
+
+.reservation-heading p{
     color:#999;
     font-size:13px;
     line-height:1.6;
 }
 
-.explore-button{
-    width:min(380px,100%);
-    margin:auto;
-    display:block;
-    padding:16px 20px;
 
-    border:1px solid #ffffff;
+/* =========================
+   LINKTREE ANTES DEL FORM
+========================= */
+
+.pre-info{
+    width:min(600px,100%);
+    margin:0 auto 30px;
+
+    padding:22px;
+
+    border:1px solid #30283a;
+    border-radius:20px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(140,50,255,.065),
+            rgba(255,215,0,.035),
+            rgba(255,255,255,.015)
+        );
+}
+
+.pre-info-title{
+    color:#ffffff;
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    margin-bottom:9px;
+}
+
+.pre-info p{
+    color:#888;
+
+    font-size:11px;
+    line-height:1.6;
+
+    margin-bottom:16px;
+}
+
+.plan-button{
+    width:100%;
+
+    display:block;
+
+    padding:16px 18px;
+
+    border:1px solid #a965ff;
     border-radius:50px;
 
     color:#ffffff;
     text-decoration:none;
 
     font-size:12px;
-    font-weight:bold;
+    font-weight:900;
     letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(140,50,255,.12),
+            rgba(255,215,0,.06)
+        );
 
     transition:.25s;
 }
 
-.explore-button:hover{
-    background:#ffffff;
-    color:#000000;
+.plan-button:hover{
     transform:translateY(-2px);
+
+    border-color:#ffd83d;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(140,50,255,.20),
+            rgba(255,215,0,.12)
+        );
 }
 
 
 /* =========================
-   RESERVAS
+   SEPARADOR
 ========================= */
 
-.reservation-section{
-    padding:10px 20px 90px;
-}
+.reserve-divider{
+    width:min(600px,100%);
 
-.reservation-heading{
-    text-align:center;
-    margin-bottom:35px;
-}
+    margin:0 auto 28px;
 
-.reservation-heading span{
-    display:block;
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    color:#777;
+
     font-size:9px;
-    letter-spacing:7px;
-    color:#bbaa66;
-    margin-bottom:12px;
+    font-weight:bold;
+    letter-spacing:3px;
+
+    text-align:center;
 }
 
-.reservation-heading h2{
-    font-size:34px;
+.reserve-divider::before,
+.reserve-divider::after{
+    content:"";
+
+    height:1px;
+    flex:1;
+
+    background:#292929;
+}
+
+.reserve-divider span{
+    white-space:nowrap;
 }
 
 
@@ -263,13 +422,6 @@ body{
 .form-box{
     width:min(600px,100%);
     margin:auto;
-    padding:32px;
-
-    border:1px solid #292929;
-    border-radius:25px;
-
-    background:
-        rgba(255,255,255,.015);
 }
 
 .field{
@@ -278,32 +430,66 @@ body{
 
 .field label{
     display:block;
+
     font-size:9px;
     letter-spacing:3px;
+
     color:#aaa;
+
     margin:0 0 9px 3px;
 }
 
 input,
 textarea{
     width:100%;
+
     background:#090909;
+
     border:1px solid #292929;
+
     color:#ffffff;
+
     border-radius:14px;
+
     padding:16px;
+
     font-size:14px;
+
     outline:none;
+
+    transition:.2s;
 }
 
 input:focus,
 textarea:focus{
-    border-color:#d8c456;
+    border-color:#a965ff;
+
+    box-shadow:
+        0 0 0 3px rgba(169,101,255,.06);
 }
 
 textarea{
     min-height:90px;
     resize:vertical;
+}
+
+
+/* =========================
+   FECHA Y HORA
+========================= */
+
+input[type="date"],
+input[type="time"]{
+    color-scheme:dark;
+    cursor:pointer;
+    min-height:52px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator{
+    cursor:pointer;
+    opacity:1;
+    filter:invert(1);
 }
 
 .double{
@@ -312,31 +498,67 @@ textarea{
     gap:14px;
 }
 
-button{
+
+/* =========================
+   BOTÓN RESERVA
+========================= */
+
+.reserve-button{
     width:100%;
+
     margin-top:10px;
+
     padding:18px;
+
     border:none;
     border-radius:50px;
+
     background:#ffffff;
     color:#000000;
-    font-weight:bold;
-    letter-spacing:3px;
+
+    font-weight:900;
+    letter-spacing:2.5px;
+
     cursor:pointer;
+
     transition:.25s;
 }
 
-button:hover{
-    opacity:.88;
-    transform:translateY(-1px);
+.reserve-button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(255,215,0,.10);
 }
 
 .note{
     text-align:center;
+
     color:#666;
+
     font-size:9px;
-    margin-top:18px;
+
+    margin-top:16px;
+
     line-height:1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid #202020;
+
+    text-align:center;
+
+    color:#555;
+
+    padding:30px 15px 40px;
+
+    font-size:10px;
+    letter-spacing:2px;
 }
 
 
@@ -350,39 +572,81 @@ button:hover{
         padding:18px;
     }
 
+    .group{
+        letter-spacing:3px;
+    }
+
     .hero{
-        padding-top:35px;
+        padding-top:20px;
+        padding-bottom:30px;
     }
 
     .logo{
-        width:300px;
-        max-width:85%;
-        margin-bottom:30px;
+        width:350px;
+        max-width:94%;
+        margin-bottom:18px;
+    }
+
+    .eyebrow{
+        font-size:9px;
+        letter-spacing:5px;
     }
 
     .hero h1{
-        font-size:43px;
+        font-size:42px;
+        letter-spacing:-1px;
+    }
+
+    .description{
+        font-size:13px;
+        padding:0 5px;
+    }
+
+    .experience-line{
+        margin-top:25px;
+    }
+
+    .experience-line span{
+        font-size:8px;
+        padding:8px 10px;
     }
 
     .info{
         grid-template-columns:1fr;
-        margin-top:45px;
+        margin-top:35px;
     }
 
-    .explore-section{
-        margin-top:25px;
+    .reservation-section{
+        width:92%;
+        margin-top:40px;
     }
 
-    .explore-box{
-        padding:32px 20px;
+    .reservation-shell{
+        padding:32px 18px;
+        border-radius:24px;
+    }
+
+    .pre-info{
+        padding:20px 15px;
+    }
+
+    .plan-button{
+        font-size:11px;
+        letter-spacing:1.4px;
+    }
+
+    .reserve-divider{
+        gap:10px;
+        letter-spacing:2px;
     }
 
     .double{
         grid-template-columns:1fr;
     }
 
-    .form-box{
-        padding:24px 20px;
+    input,
+    textarea{
+        font-size:16px;
     }
 
 }
@@ -431,20 +695,43 @@ button:hover{
     </div>
 
     <h1>
-        Donde el corazón<br>
-        sale cantando.
+        DONDE EL CORAZÓN<br>
+        SALE CANTANDO
     </h1>
 
     <p class="description">
-        Música, despecho, buenos tragos y una noche para cantar
-        esas canciones que todos conocemos.
+        Aquí el despecho no se llora,
+        <strong>se canta.</strong>
+        Show en vivo, música crossover y noches para cantar
+        esas que uno juró que ya había superado.
     </p>
+
+
+    <div class="experience-line">
+
+        <span>
+            SHOW EN VIVO
+        </span>
+
+        <span>
+            MÚSICA CROSSOVER
+        </span>
+
+        <span>
+            DESPECHO
+        </span>
+
+        <span>
+            TEMÁTICAS CADA MES
+        </span>
+
+    </div>
 
 </section>
 
 
 <!-- =========================
-     DATOS DEL NEGOCIO
+     INFORMACIÓN
 ========================= -->
 
 <section class="info">
@@ -497,107 +784,86 @@ button:hover{
 
 
 <!-- =========================
-     EXPLORAR
-========================= -->
-
-<section class="explore-section">
-
-    <div class="explore-box">
-
-        <div class="explore-small">
-            CONOCE EL FAMOSO
-        </div>
-
-        <h2>
-            Explora el negocio
-        </h2>
-
-        <p>
-            Consulta nuestra carta, conoce el lugar
-            y encuentra más información de
-            El Famoso Sinvergüenza.
-        </p>
-
-        <a
-            href="https://linktr.ee/elfamoso.modelia"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="explore-button"
-        >
-            EXPLORAR EL FAMOSO →
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
      RESERVA
 ========================= -->
 
 <section class="reservation-section">
 
-    <div class="reservation-heading">
-
-        <span>
-            VIVE EL FAMOSO
-        </span>
-
-        <h2>
-            Reserva tu mesa
-        </h2>
-
-    </div>
+    <div class="reservation-shell">
 
 
-    <div class="form-box">
+        <div class="reservation-heading">
 
-        <form id="reservaForm">
+            <span>
+                ¿NOS CANTAMOS UNA?
+            </span>
+
+            <h2>
+                Reserva tu mesa
+            </h2>
+
+            <p>
+                El despecho se pasa mejor cantando.
+            </p>
+
+        </div>
 
 
-            <div class="field">
+        <!-- =========================
+             LINKTREE
+        ========================== -->
 
-                <label>
-                    NOMBRE
-                </label>
+        <div class="pre-info">
 
-                <input
-                    id="nombre"
-                    type="text"
-                    required
-                >
-
+            <div class="pre-info-title">
+                ¿QUIERE VER QUÉ SE COCINA ESTA NOCHE?
             </div>
 
+            <p>
+                Eventos, redes, planes y todo lo que
+                está pasando en El Famoso.
+            </p>
 
-            <div class="field">
+            <a
+                href="https://linktr.ee/elfamoso.modelia"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="plan-button"
+            >
+                ENTRE AL CHISME, SINVERGÜENZA →
+            </a>
 
-                <label>
-                    TELÉFONO
-                </label>
-
-                <input
-                    id="telefono"
-                    type="tel"
-                    required
-                >
-
-            </div>
+        </div>
 
 
-            <div class="double">
+        <div class="reserve-divider">
+
+            <span>
+                O RESERVE DE UNA ↓
+            </span>
+
+        </div>
+
+
+        <!-- =========================
+             FORMULARIO
+        ========================== -->
+
+        <div class="form-box">
+
+            <form id="reservaForm">
 
 
                 <div class="field">
 
                     <label>
-                        FECHA
+                        NOMBRE
                     </label>
 
                     <input
-                        id="fecha"
-                        type="date"
+                        id="nombre"
+                        type="text"
+                        autocomplete="name"
                         required
                     >
 
@@ -607,74 +873,177 @@ button:hover{
                 <div class="field">
 
                     <label>
-                        HORA
+                        TELÉFONO
                     </label>
 
                     <input
-                        id="hora"
-                        type="time"
+                        id="telefono"
+                        type="tel"
+                        inputmode="tel"
+                        autocomplete="tel"
                         required
                     >
 
                 </div>
 
 
-            </div>
+                <div class="double">
 
 
-            <div class="field">
+                    <div class="field">
 
-                <label>
-                    NÚMERO DE PERSONAS
-                </label>
+                        <label>
+                            FECHA
+                        </label>
 
-                <input
-                    id="personas"
-                    type="number"
-                    min="1"
-                    required
+                        <input
+                            id="fecha"
+                            type="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            HORA
+                        </label>
+
+                        <input
+                            id="hora"
+                            type="time"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        NÚMERO DE PERSONAS
+                    </label>
+
+                    <input
+                        id="personas"
+                        type="number"
+                        inputmode="numeric"
+                        min="1"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        OBSERVACIONES
+                    </label>
+
+                    <textarea
+                        id="observaciones"
+                        placeholder="Cumpleaños, celebración, ubicación preferida..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="reserve-button"
                 >
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    OBSERVACIONES
-                </label>
-
-                <textarea
-                    id="observaciones"
-                    placeholder="Cumpleaños, ubicación preferida, celebración..."
-                ></textarea>
-
-            </div>
+                    RESERVAR MESA →
+                </button>
 
 
-            <button type="submit">
-                RESERVAR POR WHATSAPP →
-            </button>
+                <div class="note">
+                    Tu solicitud quedará registrada y
+                    continuaremos la confirmación por WhatsApp.
+                </div>
 
 
-            <div class="note">
-                Al continuar serás dirigido
-                a WhatsApp con la información
-                de tu reserva.
-            </div>
+            </form>
 
-
-        </form>
+        </div>
 
     </div>
 
 </section>
+
+
+<footer>
+    EL FAMOSO SINVERGÜENZA · GRUPO P3 © 2026
+</footer>
 
 
 </div>
 
 
 <script>
+
+/* =========================
+   FECHA MÍNIMA = HOY
+========================= */
+
+const campoFecha =
+    document.getElementById("fecha");
+
+const hoy =
+    new Date();
+
+const anio =
+    hoy.getFullYear();
+
+const mes =
+    String(hoy.getMonth() + 1)
+    .padStart(2,"0");
+
+const dia =
+    String(hoy.getDate())
+    .padStart(2,"0");
+
+campoFecha.min =
+    `${anio}-${mes}-${dia}`;
+
+
+/* =========================
+   ABRIR SELECTOR FECHA/HORA
+========================= */
+
+document
+.querySelectorAll(
+    'input[type="date"], input[type="time"]'
+)
+.forEach(function(campo){
+
+    campo.addEventListener(
+        "click",
+        function(){
+
+            if(
+                typeof campo.showPicker === "function"
+            ){
+
+                try{
+                    campo.showPicker();
+                }
+                catch(error){
+                    /* Selector nativo */
+                }
+
+            }
+
+        }
+    );
+
+});
+
 
 /* =========================
    FORMULARIO DE RESERVA
@@ -728,7 +1097,6 @@ document
             .trim();
 
 
-
         if(
             !nombre ||
             !telefono ||
@@ -746,7 +1114,6 @@ document
         }
 
 
-
         /* =========================
            FORMATEAR FECHA
         ========================= */
@@ -754,10 +1121,8 @@ document
         const partesFecha =
             fecha.split("-");
 
-
         const fechaFormateada =
             `${partesFecha[2]}/${partesFecha[1]}/${partesFecha[0]}`;
-
 
 
         /* =========================
@@ -767,34 +1132,27 @@ document
         const partesHora =
             hora.split(":");
 
-
         let horaNumero =
             parseInt(
                 partesHora[0]
             );
 
-
         const minutos =
             partesHora[1];
-
 
         const periodo =
             horaNumero >= 12
             ? "PM"
             : "AM";
 
-
         horaNumero =
             horaNumero % 12;
-
 
         horaNumero =
             horaNumero || 12;
 
-
         const horaFormateada =
             `${horaNumero}:${minutos} ${periodo}`;
-
 
 
         /* =========================
@@ -816,7 +1174,6 @@ ${observaciones || "Sin observaciones"}
 
 *EL FAMOSO SINVERGÜENZA*
 Calle 24C #75-43 · Modelia`;
-
 
 
         /* =========================
@@ -870,11 +1227,9 @@ Calle 24C #75-43 · Modelia`;
         );
 
 
-
         const urlSheets =
             "https://script.google.com/macros/s/AKfycbyQr-XCrK-47-HMf8NS-wr1tOF7Z-p4Mt86Ce1vmRD1vWbr7CoR1coU_3MdMRc3R0PKTA/exec?" +
             datosSheets.toString();
-
 
 
         fetch(
@@ -884,7 +1239,6 @@ Calle 24C #75-43 · Modelia`;
                 mode:"no-cors"
             }
         );
-
 
 
         /* =========================
