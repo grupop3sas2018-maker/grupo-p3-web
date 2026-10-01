@@ -55,7 +55,6 @@ header{
 }
 
 .grupo-logo{
-    /* Un poco más grande que antes */
     width:min(820px,94%);
     height:auto;
     display:block;
@@ -245,7 +244,7 @@ header{
 
 
 /* =========================
-   COLORES TARJETAS
+   COLORES DE LAS TARJETAS
 ========================= */
 
 .famoso{
@@ -282,27 +281,53 @@ header{
 
 
 /* =========================
-   TEXTOS DE LOS NEGOCIOS
+   TEXTO DE CADA NEGOCIO
 ========================= */
 
 .tagline{
-    font-size:13px;
-
-    letter-spacing:1.6px;
-
     color:#ddd;
 
     margin-bottom:22px;
 
-    line-height:1.6;
-
-    min-height:42px;
+    min-height:52px;
 
     display:flex;
+
+    flex-direction:column;
 
     align-items:center;
 
     justify-content:center;
+
+    gap:6px;
+
+    text-align:center;
+}
+
+.tagline-main{
+    display:block;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    letter-spacing:1.6px;
+
+    line-height:1.4;
+}
+
+.tagline-hook{
+    display:block;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1.4px;
+
+    line-height:1.4;
+
+    color:#ffffff;
 }
 
 
@@ -344,66 +369,17 @@ header{
 
 
 /* =========================
-   PIE / CARACTERÍSTICAS
-========================= */
-
-.features{
-    border-top:1px solid #252525;
-
-    border-bottom:1px solid #252525;
-
-    padding:35px 20px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:70px;
-
-    text-align:center;
-}
-
-.feature{
-    min-width:130px;
-}
-
-.icon{
-    font-size:28px;
-
-    margin-bottom:10px;
-
-    filter:grayscale(1);
-}
-
-.feature strong{
-    display:block;
-
-    font-size:13px;
-
-    letter-spacing:1px;
-}
-
-.feature span{
-    display:block;
-
-    color:#aaa;
-
-    font-size:11px;
-
-    margin-top:5px;
-}
-
-
-/* =========================
    FOOTER
 ========================= */
 
 footer{
+    border-top:1px solid #252525;
+
     text-align:center;
 
     color:#777;
 
-    padding:30px 15px 45px;
+    padding:35px 15px 45px;
 
     font-size:11px;
 
@@ -476,35 +452,25 @@ footer{
     }
 
     .tagline{
-        font-size:12px;
+        min-height:58px;
+
+        gap:7px;
+    }
+
+    .tagline-main{
+        font-size:11px;
 
         letter-spacing:1.2px;
-
-        min-height:auto;
     }
 
-    .features{
-        gap:15px;
+    .tagline-hook{
+        font-size:11px;
 
-        justify-content:space-around;
-
-        padding-left:5px;
-
-        padding-right:5px;
+        letter-spacing:1.1px;
     }
 
-    .feature{
-        min-width:auto;
-
-        width:33%;
-    }
-
-    .feature strong{
-        font-size:10px;
-    }
-
-    .feature span{
-        font-size:9px;
+    footer{
+        padding-top:30px;
     }
 }
 
@@ -568,7 +534,9 @@ footer{
 <main class="venues">
 
 
-    <!-- EL FAMOSO -->
+    <!-- =====================
+         EL FAMOSO
+    ====================== -->
 
     <article class="card famoso">
 
@@ -585,7 +553,15 @@ footer{
             </div>
 
             <div class="tagline">
-                SHOW EN VIVO • MÚSICA CROSSOVER • TEMÁTICAS CADA MES
+
+                <span class="tagline-main">
+                    SHOW EN VIVO • MÚSICA CROSSOVER
+                </span>
+
+                <span class="tagline-hook">
+                    CADA MES, UNA NUEVA TEMÁTICA
+                </span>
+
             </div>
 
             <a
@@ -600,7 +576,9 @@ footer{
     </article>
 
 
-    <!-- TOKIO URBANO -->
+    <!-- =====================
+         TOKIO URBANO
+    ====================== -->
 
     <article class="card tokio">
 
@@ -617,7 +595,15 @@ footer{
             </div>
 
             <div class="tagline">
-                PERFORMANCE • MÚSICA URBANA • TEMÁTICAS CADA MES
+
+                <span class="tagline-main">
+                    PERFORMANCE • MÚSICA URBANA
+                </span>
+
+                <span class="tagline-hook">
+                    SHOWS DIFERENTES • NOCHES DIFERENTES
+                </span>
+
             </div>
 
             <a
@@ -632,7 +618,9 @@ footer{
     </article>
 
 
-    <!-- LA CANTINA MODELLIA -->
+    <!-- =====================
+         LA CANTINA MODELLIA
+    ====================== -->
 
     <article class="card cantina">
 
@@ -649,7 +637,15 @@ footer{
             </div>
 
             <div class="tagline">
-                DOS AMBIENTES • MÚSICA CROSSOVER Y POPULAR • BOLIRANA
+
+                <span class="tagline-main">
+                    DOS AMBIENTES • CROSSOVER Y POPULAR
+                </span>
+
+                <span class="tagline-hook">
+                    BOLIRANA • AQUÍ SIEMPRE HAY PLAN
+                </span>
+
             </div>
 
             <a
@@ -664,7 +660,9 @@ footer{
     </article>
 
 
-    <!-- DESCARADOS FONDA -->
+    <!-- =====================
+         DESCARADOS FONDA
+    ====================== -->
 
     <article class="card descarados">
 
@@ -681,7 +679,15 @@ footer{
             </div>
 
             <div class="tagline">
-                MÚSICA FONDA Y CROSSOVER • SHOWS EN VIVO • COMIDA
+
+                <span class="tagline-main">
+                    SÉ TU PROPIO BARTENDER
+                </span>
+
+                <span class="tagline-hook">
+                    LA ESQUINA MÁS PRENDIDA DE LA ZONA ROSA
+                </span>
+
             </div>
 
             <a
@@ -700,65 +706,6 @@ footer{
 
 
 <!-- =========================
-     CARACTERÍSTICAS
-========================= -->
-
-<section class="features">
-
-    <div class="feature">
-
-        <div class="icon">
-            ▣
-        </div>
-
-        <strong>
-            EVENTOS
-        </strong>
-
-        <span>
-            ACTUALIZADOS
-        </span>
-
-    </div>
-
-
-    <div class="feature">
-
-        <div class="icon">
-            ♕
-        </div>
-
-        <strong>
-            RESERVAS
-        </strong>
-
-        <span>
-            RÁPIDAS
-        </span>
-
-    </div>
-
-
-    <div class="feature">
-
-        <div class="icon">
-            ◉
-        </div>
-
-        <strong>
-            WHATSAPP
-        </strong>
-
-        <span>
-            DIRECTO
-        </span>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
      FOOTER
 ========================= -->
 
@@ -770,4 +717,5 @@ footer{
 </div>
 
 </body>
+
 </html>
