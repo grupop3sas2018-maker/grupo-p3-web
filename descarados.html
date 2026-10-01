@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Descarados Cantina | Grupo P3</title>
+<title>Descarados Fonda | Grupo P3</title>
 
 <style>
 
@@ -32,23 +32,13 @@ body{
 
 .page{
     min-height:100vh;
+    overflow:hidden;
 
     background:
-        radial-gradient(
-            circle at 45% 20%,
-            rgba(0,235,255,.10),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 60% 24%,
-            rgba(255,0,140,.10),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 52% 28%,
-            rgba(255,220,0,.06),
-            transparent 22%
-        ),
+        radial-gradient(circle at 15% 12%, rgba(0,235,255,.15), transparent 25%),
+        radial-gradient(circle at 85% 18%, rgba(255,0,140,.14), transparent 26%),
+        radial-gradient(circle at 25% 55%, rgba(255,220,0,.08), transparent 25%),
+        radial-gradient(circle at 80% 72%, rgba(130,50,255,.10), transparent 28%),
         #050505;
 }
 
@@ -84,21 +74,19 @@ body{
 
 .hero{
     text-align:center;
-    padding:40px 20px 35px;
+    padding:25px 20px 45px;
 }
 
 .logo{
-    width:390px;
-    max-width:82%;
+    width:460px;
+    max-width:88%;
     height:auto;
     object-fit:contain;
-    margin-bottom:35px;
+    margin-bottom:20px;
 
     filter:
-        drop-shadow(
-            0 0 25px
-            rgba(0,220,255,.15)
-        );
+        drop-shadow(0 0 22px rgba(0,220,255,.13))
+        drop-shadow(0 0 30px rgba(255,0,140,.08));
 }
 
 .eyebrow{
@@ -106,20 +94,71 @@ body{
     letter-spacing:7px;
     color:#50eaff;
     margin-bottom:20px;
+    font-weight:bold;
 }
 
 .hero h1{
-    font-size:clamp(44px,6vw,72px);
-    line-height:1;
-    margin-bottom:24px;
+    max-width:850px;
+    margin:0 auto 22px;
+
+    font-size:clamp(42px,6vw,74px);
+    line-height:.98;
+    letter-spacing:-2px;
+    font-weight:900;
 }
 
 .description{
-    max-width:650px;
+    max-width:690px;
     margin:auto;
+
     color:#aaa;
     line-height:1.7;
-    font-size:14px;
+    font-size:15px;
+}
+
+.description strong{
+    color:#ffffff;
+}
+
+.experience-line{
+    max-width:850px;
+    margin:30px auto 0;
+
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+}
+
+.experience-line span{
+    border:1px solid #292929;
+    border-radius:50px;
+
+    padding:9px 13px;
+
+    background:rgba(255,255,255,.025);
+
+    font-size:9px;
+    font-weight:bold;
+    letter-spacing:1.3px;
+
+    color:#ddd;
+}
+
+.experience-line span:nth-child(1){
+    border-color:rgba(0,235,255,.5);
+}
+
+.experience-line span:nth-child(2){
+    border-color:rgba(255,0,140,.5);
+}
+
+.experience-line span:nth-child(3){
+    border-color:rgba(255,220,0,.5);
+}
+
+.experience-line span:nth-child(4){
+    border-color:rgba(145,70,255,.5);
 }
 
 
@@ -129,7 +168,7 @@ body{
 
 .info{
     width:min(1050px,90%);
-    margin:65px auto 35px;
+    margin:50px auto 35px;
 
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -146,7 +185,30 @@ body{
     text-align:center;
 
     background:
-        rgba(255,255,255,.015);
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.025),
+            rgba(255,255,255,.01)
+        );
+
+    transition:.25s;
+}
+
+.info-card:hover{
+    transform:translateY(-3px);
+    border-color:#444;
+}
+
+.info-card:nth-child(1){
+    box-shadow:inset 0 1px rgba(0,235,255,.25);
+}
+
+.info-card:nth-child(2){
+    box-shadow:inset 0 1px rgba(255,0,140,.25);
+}
+
+.info-card:nth-child(3){
+    box-shadow:inset 0 1px rgba(255,220,0,.25);
 }
 
 .info-title{
@@ -156,88 +218,17 @@ body{
     margin-bottom:15px;
 }
 
+.info-card:nth-child(2) .info-title{
+    color:#ff4cad;
+}
+
+.info-card:nth-child(3) .info-title{
+    color:#ffe04a;
+}
+
 .info-text{
     font-size:14px;
     line-height:1.55;
-}
-
-
-/* =========================
-   EXPLORAR / CARTA
-========================= */
-
-.explore-section{
-    width:min(850px,90%);
-    margin:35px auto 65px;
-}
-
-.explore-box{
-    border:1px solid #272727;
-    border-radius:24px;
-
-    padding:38px 30px;
-    text-align:center;
-
-    background:
-        radial-gradient(
-            circle at 35% 0%,
-            rgba(0,235,255,.09),
-            transparent 48%
-        ),
-        radial-gradient(
-            circle at 65% 0%,
-            rgba(255,0,140,.09),
-            transparent 48%
-        ),
-        rgba(255,255,255,.02);
-}
-
-.explore-small{
-    font-size:9px;
-    letter-spacing:5px;
-    color:#ff4cad;
-    margin-bottom:10px;
-}
-
-.explore-box h2{
-    font-size:30px;
-    margin-bottom:12px;
-}
-
-.explore-box p{
-    max-width:520px;
-    margin:0 auto 24px;
-
-    color:#999;
-    font-size:13px;
-    line-height:1.6;
-}
-
-.explore-button{
-    width:min(380px,100%);
-    margin:auto;
-
-    display:block;
-
-    padding:16px 20px;
-
-    border:1px solid #ffffff;
-    border-radius:50px;
-
-    color:#ffffff;
-    text-decoration:none;
-
-    font-size:12px;
-    font-weight:bold;
-    letter-spacing:2px;
-
-    transition:.25s;
-}
-
-.explore-button:hover{
-    background:#ffffff;
-    color:#000000;
-    transform:translateY(-2px);
 }
 
 
@@ -246,24 +237,54 @@ body{
 ========================= */
 
 .reservation-section{
-    padding:10px 20px 90px;
+    width:min(850px,92%);
+    margin:55px auto 0;
+    padding-bottom:90px;
+}
+
+.reservation-shell{
+    position:relative;
+
+    border:1px solid #303030;
+    border-radius:30px;
+
+    padding:45px;
+
+    background:
+        radial-gradient(circle at 0% 0%, rgba(0,235,255,.10), transparent 35%),
+        radial-gradient(circle at 100% 0%, rgba(255,0,140,.10), transparent 35%),
+        radial-gradient(circle at 50% 100%, rgba(255,220,0,.05), transparent 40%),
+        rgba(255,255,255,.015);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35);
 }
 
 .reservation-heading{
     text-align:center;
-    margin-bottom:35px;
+    margin-bottom:32px;
 }
 
 .reservation-heading span{
     display:block;
+
     font-size:9px;
     letter-spacing:7px;
+
     color:#ff4cad;
+
     margin-bottom:12px;
 }
 
 .reservation-heading h2{
-    font-size:34px;
+    font-size:clamp(30px,5vw,42px);
+    margin-bottom:12px;
+}
+
+.reservation-heading p{
+    color:#999;
+    font-size:13px;
+    line-height:1.6;
 }
 
 
@@ -274,14 +295,6 @@ body{
 .form-box{
     width:min(600px,100%);
     margin:auto;
-
-    padding:32px;
-
-    border:1px solid #292929;
-    border-radius:25px;
-
-    background:
-        rgba(255,255,255,.015);
 }
 
 .field{
@@ -312,16 +325,38 @@ textarea{
 
     font-size:14px;
     outline:none;
+
+    transition:.2s;
 }
 
 input:focus,
 textarea:focus{
     border-color:#40eaff;
+    box-shadow:0 0 0 3px rgba(64,234,255,.05);
 }
 
 textarea{
     min-height:90px;
     resize:vertical;
+}
+
+
+/* =========================
+   FECHA Y HORA
+========================= */
+
+input[type="date"],
+input[type="time"]{
+    color-scheme:dark;
+    cursor:pointer;
+    min-height:52px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator{
+    cursor:pointer;
+    opacity:1;
+    filter:invert(1);
 }
 
 .double{
@@ -330,7 +365,12 @@ textarea{
     gap:14px;
 }
 
-button{
+
+/* =========================
+   BOTÓN RESERVA
+========================= */
+
+.reserve-button{
     width:100%;
 
     margin-top:10px;
@@ -342,24 +382,113 @@ button{
     background:#ffffff;
     color:#000000;
 
-    font-weight:bold;
-    letter-spacing:3px;
+    font-weight:900;
+    letter-spacing:2.5px;
 
     cursor:pointer;
+
     transition:.25s;
 }
 
-button:hover{
-    opacity:.88;
-    transform:translateY(-1px);
+.reserve-button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(255,255,255,.10);
 }
 
 .note{
     text-align:center;
+
     color:#666;
+
     font-size:9px;
-    margin-top:18px;
+
+    margin-top:16px;
+
     line-height:1.5;
+}
+
+
+/* =========================
+   LINKTREE / SEGUNDO BOTÓN
+========================= */
+
+.more-plan{
+    width:min(600px,100%);
+
+    margin:25px auto 0;
+
+    padding-top:25px;
+
+    border-top:1px solid #242424;
+
+    text-align:center;
+}
+
+.more-plan p{
+    color:#777;
+    font-size:11px;
+    line-height:1.6;
+    margin-bottom:14px;
+}
+
+.plan-button{
+    width:100%;
+
+    display:block;
+
+    padding:17px 20px;
+
+    border:1px solid #50eaff;
+    border-radius:50px;
+
+    color:#ffffff;
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,235,255,.07),
+            rgba(255,0,140,.07),
+            rgba(255,220,0,.05)
+        );
+
+    transition:.25s;
+}
+
+.plan-button:hover{
+    transform:translateY(-2px);
+
+    border-color:#ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,235,255,.14),
+            rgba(255,0,140,.14),
+            rgba(255,220,0,.10)
+        );
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid #202020;
+
+    text-align:center;
+
+    color:#555;
+
+    padding:30px 15px 40px;
+
+    font-size:10px;
+    letter-spacing:2px;
 }
 
 
@@ -373,39 +502,67 @@ button:hover{
         padding:18px;
     }
 
+    .group{
+        letter-spacing:3px;
+    }
+
     .hero{
-        padding-top:30px;
+        padding-top:20px;
+        padding-bottom:30px;
     }
 
     .logo{
-        width:320px;
-        max-width:88%;
-        margin-bottom:30px;
+        width:370px;
+        max-width:94%;
+        margin-bottom:18px;
+    }
+
+    .eyebrow{
+        font-size:9px;
+        letter-spacing:5px;
     }
 
     .hero h1{
-        font-size:43px;
+        font-size:42px;
+        letter-spacing:-1px;
+    }
+
+    .description{
+        font-size:13px;
+        padding:0 5px;
+    }
+
+    .experience-line{
+        margin-top:25px;
+    }
+
+    .experience-line span{
+        font-size:8px;
+        padding:8px 10px;
     }
 
     .info{
         grid-template-columns:1fr;
-        margin-top:45px;
+        margin-top:35px;
     }
 
-    .explore-section{
-        margin-top:25px;
+    .reservation-section{
+        width:92%;
+        margin-top:40px;
     }
 
-    .explore-box{
-        padding:32px 20px;
+    .reservation-shell{
+        padding:32px 18px;
+        border-radius:24px;
     }
 
     .double{
         grid-template-columns:1fr;
     }
 
-    .form-box{
-        padding:24px 20px;
+    input,
+    textarea{
+        font-size:16px;
     }
 
 }
@@ -444,25 +601,46 @@ button:hover{
 <section class="hero">
 
     <img
-        src="descarados.png"
+        src="descarados-fonda.png"
         class="logo"
-        alt="Descarados Cantina"
+        alt="Descarados Fonda"
     >
 
     <div class="eyebrow">
-        DESCARADOS CANTINA
+        DESCARADOS FONDA
     </div>
 
     <h1>
-        Sin pena.<br>
-        Sin permiso.
+        LA ESQUINA MÁS PRENDIDA<br>
+        DE LA ZONA ROSA
     </h1>
 
     <p class="description">
-        Tragos, actitud y una nueva experiencia
-        en plena Zona T. Un lugar para quedarse
-        desde el día hasta que se acabe la noche.
+        Aquí usted viene a hacer lo que en otros bares no lo dejan.
+        <strong>Sea su propio bartender, pida la música que quiera,
+        coma, cante y baile.</strong>
     </p>
+
+
+    <div class="experience-line">
+
+        <span>
+            SÉ TU PROPIO BARTENDER
+        </span>
+
+        <span>
+            PIDA LA MÚSICA QUE QUIERA
+        </span>
+
+        <span>
+            COMIDA
+        </span>
+
+        <span>
+            SHOWS EN VIVO
+        </span>
+
+    </div>
 
 </section>
 
@@ -510,7 +688,7 @@ button:hover{
         </div>
 
         <div class="info-text">
-            320 853 6104
+            311 742 1096
             <br>
             Reservas por WhatsApp
         </div>
@@ -521,107 +699,45 @@ button:hover{
 
 
 <!-- =========================
-     CARTA
-========================= -->
-
-<section class="explore-section">
-
-    <div class="explore-box">
-
-        <div class="explore-small">
-            CONOCE DESCARADOS
-        </div>
-
-        <h2>
-            Nuestra carta
-        </h2>
-
-        <p>
-            Consulta nuestra carta de licores,
-            bebidas y opciones disponibles en
-            Descarados Cantina.
-        </p>
-
-        <a
-            href="https://drive.google.com/file/d/1qjKwhvJCq_9WPisH3QzZLBsN43OlQU_B/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="explore-button"
-        >
-            VER CARTA →
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     RESERVA
+     RESERVA + LINKTREE
 ========================= -->
 
 <section class="reservation-section">
 
-    <div class="reservation-heading">
+    <div class="reservation-shell">
 
-        <span>
-            VIVE DESCARADOS
-        </span>
+        <div class="reservation-heading">
 
-        <h2>
-            Reserva tu mesa
-        </h2>
+            <span>
+                ¿YA SE ANTOJÓ?
+            </span>
 
-    </div>
+            <h2>
+                Reserve su mesa
+            </h2>
 
+            <p>
+                Venga a hacer el descarado.
+            </p>
 
-    <div class="form-box">
-
-        <form id="reservaForm">
-
-
-            <div class="field">
-
-                <label>
-                    NOMBRE
-                </label>
-
-                <input
-                    id="nombre"
-                    type="text"
-                    required
-                >
-
-            </div>
+        </div>
 
 
-            <div class="field">
+        <div class="form-box">
 
-                <label>
-                    TELÉFONO
-                </label>
-
-                <input
-                    id="telefono"
-                    type="tel"
-                    required
-                >
-
-            </div>
-
-
-            <div class="double">
+            <form id="reservaForm">
 
 
                 <div class="field">
 
                     <label>
-                        FECHA
+                        NOMBRE
                     </label>
 
                     <input
-                        id="fecha"
-                        type="date"
+                        id="nombre"
+                        type="text"
+                        autocomplete="name"
                         required
                     >
 
@@ -631,74 +747,201 @@ button:hover{
                 <div class="field">
 
                     <label>
-                        HORA
+                        TELÉFONO
                     </label>
 
                     <input
-                        id="hora"
-                        type="time"
+                        id="telefono"
+                        type="tel"
+                        inputmode="tel"
+                        autocomplete="tel"
                         required
                     >
 
                 </div>
 
 
-            </div>
+                <div class="double">
 
 
-            <div class="field">
+                    <div class="field">
 
-                <label>
-                    NÚMERO DE PERSONAS
-                </label>
+                        <label>
+                            FECHA
+                        </label>
 
-                <input
-                    id="personas"
-                    type="number"
-                    min="1"
-                    required
+                        <input
+                            id="fecha"
+                            type="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            HORA
+                        </label>
+
+                        <input
+                            id="hora"
+                            type="time"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        NÚMERO DE PERSONAS
+                    </label>
+
+                    <input
+                        id="personas"
+                        type="number"
+                        inputmode="numeric"
+                        min="1"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>
+                        OBSERVACIONES
+                    </label>
+
+                    <textarea
+                        id="observaciones"
+                        placeholder="Cumpleaños, celebración, ubicación preferida..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="reserve-button"
                 >
+                    RESERVAR MESA →
+                </button>
+
+
+                <div class="note">
+                    Tu solicitud quedará registrada y
+                    continuaremos la confirmación por WhatsApp.
+                </div>
+
+
+            </form>
+
+
+            <!-- =========================
+                 LINKTREE
+            ========================== -->
+
+            <div class="more-plan">
+
+                <p>
+                    Carta, redes, planes y todo lo que está pasando en Descarados.
+                </p>
+
+                <a
+                    href="https://linktr.ee/descaradosfonda"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="plan-button"
+                >
+                    ¿QUÉ HAY PA' HACER, MIJO? →
+                </a>
 
             </div>
 
 
-            <div class="field">
-
-                <label>
-                    OBSERVACIONES
-                </label>
-
-                <textarea
-                    id="observaciones"
-                    placeholder="Cumpleaños, celebración, ubicación preferida..."
-                ></textarea>
-
-            </div>
-
-
-            <button type="submit">
-                RESERVAR POR WHATSAPP →
-            </button>
-
-
-            <div class="note">
-                Al continuar serás dirigido
-                a WhatsApp con la información
-                de tu reserva.
-            </div>
-
-
-        </form>
+        </div>
 
     </div>
 
 </section>
+
+
+<footer>
+    DESCARADOS FONDA · GRUPO P3 © 2026
+</footer>
 
 
 </div>
 
 
 <script>
+
+/* =========================
+   FECHA MÍNIMA = HOY
+========================= */
+
+const campoFecha =
+    document.getElementById("fecha");
+
+const hoy =
+    new Date();
+
+const anio =
+    hoy.getFullYear();
+
+const mes =
+    String(hoy.getMonth() + 1)
+    .padStart(2,"0");
+
+const dia =
+    String(hoy.getDate())
+    .padStart(2,"0");
+
+campoFecha.min =
+    `${anio}-${mes}-${dia}`;
+
+
+/* =========================
+   ABRIR SELECTOR FECHA/HORA
+========================= */
+
+document
+.querySelectorAll(
+    'input[type="date"], input[type="time"]'
+)
+.forEach(function(campo){
+
+    campo.addEventListener(
+        "click",
+        function(){
+
+            if(
+                typeof campo.showPicker === "function"
+            ){
+
+                try{
+                    campo.showPicker();
+                }
+                catch(error){
+                    /* El navegador usará
+                       su selector nativo */
+                }
+
+            }
+
+        }
+    );
+
+});
+
 
 /* =========================
    FORMULARIO DE RESERVA
@@ -822,7 +1065,7 @@ document
         ========================= */
 
         const mensaje =
-`*NUEVA RESERVA — DESCARADOS CANTINA*
+`*NUEVA RESERVA — DESCARADOS FONDA*
 ━━━━━━━━━━━━━━━━
 
 *Nombre:* ${nombre}
@@ -834,7 +1077,7 @@ document
 *Observaciones:*
 ${observaciones || "Sin observaciones"}
 
-*DESCARADOS CANTINA*
+*DESCARADOS FONDA*
 Calle 83 #14A-07 · Zona T`;
 
 
@@ -845,6 +1088,13 @@ Calle 83 #14A-07 · Zona T`;
         const datosSheets =
             new URLSearchParams();
 
+
+        /*
+        IMPORTANTE:
+        Por ahora conservamos este nombre
+        para no romper el color automático
+        de la hoja de reservas.
+        */
 
         datosSheets.append(
             "negocio",
@@ -904,11 +1154,11 @@ Calle 83 #14A-07 · Zona T`;
 
 
         /* =========================
-           WHATSAPP
+           WHATSAPP DESCARADOS
         ========================= */
 
         const whatsapp =
-            "https://wa.me/573208536104?text=" +
+            "https://wa.me/573117421096?text=" +
             encodeURIComponent(
                 mensaje
             );
